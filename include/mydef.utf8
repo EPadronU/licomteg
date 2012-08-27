@@ -1,0 +1,249 @@
+# vim: filetype=lout
+
+###############################################################################
+# Macros
+###############################################################################
+
+# Salto de línea.
+macro @FF { //1.2fx }
+
+# Para no dividir un parrafo al indentar.
+macro @JN { &1s }
+
+# Páginas cuya numeración será omitida.
+macro @OmittedPages { 1 2 3 4 5 6 8 }
+
+
+###############################################################################
+# Definiciones
+###############################################################################
+
+# Para centrar el siguiente símbolo.
+def @MyCenter
+    named @Options { }
+    right @Body
+{
+    { @Options clines } @Break @Body
+}
+
+# Para omitir la númeración en las páginas deseadas.
+def @IfNotInOmittedPages
+    left @PageNum
+{
+    @PageNum @Case {
+        { @OmittedPages } @Yield @Null
+        else @Yield @PageNum
+    }
+}
+
+# Secuencia de puntos para el índice general.
+def @Dots 
+{
+    { @Dots }.
+}
+
+# Símbolo receptivo para una entrada en el índice general.
+def @EntryPlace
+{
+    @Galley
+}
+
+# Lista de entradas del índice general.
+def @EntryList
+{
+    @EntryPlace
+    //1.2f
+    @EntryList
+}
+
+# Galera que se encarga de añadir un símbolo en el índice general.
+def @AddToIndex into { @EntryPlace&&foll_or_prec }
+    named compulsory @Tag { }
+    named compulsory @Title { }
+{
+   @Title @Dots @PageOf @Tag
+} 
+
+# Galera que se encarga de añadir un capítulo en el índice general.
+def @AddChapterToIndex into { @EntryPlace&&foll_or_prec }
+    named compulsory @Num { }
+    named compulsory @Title { }
+{
+   Capítulo { @Num }. @Title
+} 
+
+# Símbolos visibles fuera de @TEG
+export @Abstract @Chapter @Cover @ExtraSection @Facade @IndexOfContents @Introduction @Sumary
+
+# El núcleo de este archivo de configuración
+def @TEG
+    named compulsory @MyAddress { }
+    named compulsory @MyEmail { }
+    named compulsory @MyFirstName { }
+    named compulsory @MyIDNumber { }
+    named compulsory @MyLastName { }
+    named compulsory @MyPhoneNumber { }
+    named compulsory @PaperTitle { }
+    body @Body
+{
+    def @Abstract
+        named compulsory @KeyWords { }
+        named @Tag { }
+        right @Body
+    {
+        @PageMark @Tag // @AddToIndex @Title { Abstract } @Tag { @Tag } //
+
+        1.2fx @Break {
+            { @MyLastName }, { @MyFirstName }. @B { ``@PaperTitle '' }. Trabajo Especial de Grado. @JN
+            La Universidad del Zulia. Facultad Experimental de Ciencias. División de Programas @JN
+            Especiales. Maracaibo, Venezuela. @Date @Format { @Year }. @PageOf { last.page }p.
+        }
+        //3.6f
+        @MyCenter @B ABSTRACT
+        //2.4f
+        1.2fx @Break { @Body }
+        //3.6f
+        @B { Key Words }: @KeyWords
+        //1.2f
+        @B { Email }: @MyEmail
+    }
+
+    def @Chapter
+        named compulsory @Num { }
+        named compulsory @Title { }
+        right @Body
+    {
+        @AddChapterToIndex @Title { @Title } @Num { @Num }
+
+        @MyCenter @B { CAPÍTULO @Num //1.2fx @Title }
+        //1.2f
+        @Body
+    }
+
+    def @Cover
+        named @Cotutor { dfl }
+        named compulsory @Month { }
+        named compulsory @Tutor { }
+        named conpulsory @Year { }
+    {
+        @MyCenter {
+            #0.10 @Scale @IncludeGraphic "./include/img/logo luz.eps"
+            ||0.2c
+            @MyCenter {
+                REPÚBLICA BOLIVARIANA DE VENEZUELA @FF
+                LA UNIVERSIDAD DEL ZULIA @FF
+                FACULTAD EXPERIMENTAL DE CIENCIAS @FF
+                DIVISIÓN DE PROGRAMAS ESPECIALES @FF
+                LICENCIATURA EN COMPUTACIÓN
+            }
+            ||0.2c
+            #0.17 @Scale @IncludeGraphic "./include/img/logo fec.eps"
+        }
+        //10.8f
+        @MyCenter @Options { 1.2fx } @B { @PaperTitle }
+        //1.2f
+        @MyCenter @Options { 1.2fx } @B {
+            Proyecto de Trabajo Especial de Grado presentado como @FF
+            requisito para optar al título de Licenciado en Computación
+        }
+        //10.8f
+        rlines @Break {
+            Autor: @MyFirstName @MyLastName
+            //1.2f
+            Tutor: @Tutor
+            //1.2f
+            @Cotutor @Case { dfl @Yield { {} //1.2f {} } else @Yield { Cotutor: @Cotutor } }
+        }
+        //16.8f
+        @MyCenter { Maracaibo, @Month de @Year }
+    }
+
+    # Para dedicatoria, reconocimiento y agradecimiento
+    def @ExtraSection
+        named @Tag { }
+        named compulsory @Title { }
+        right @Body
+    {
+        @PageMark @Tag // @AddToIndex @Title { @Title } @Tag { @Tag } //
+
+        @MyCenter @B @Title
+        //2.4f
+        @Body
+    }
+
+    # Frontispicio
+    def @Facade
+        named @CotutorInfo { dfl }
+        named compulsory @TutorInfo { }
+    {
+        def @Sign
+            left @Linesize
+            right @Body
+        {
+            @Linesize @Wide @Underline @HExpand {}
+            &/0.6f
+            @I @Body
+        }
+
+        @MyCenter @Options { 1.2fx } @B @PaperTitle
+        //10.8f
+        @MyCenter {
+            10c @Sign {
+                @MyFirstName @MyLastName @FF
+                CI. No.: @MyIDNumber @FF
+                Teléfono: @MyPhoneNumber @FF
+                @MyAddress @FF
+                Correo electrónico: @MyEmail
+            }
+            //8.4f
+            10c @Sign @TutorInfo
+            //8.4f
+            @CotutorInfo @Case { dfl @Yield { {} } else @Yield { 10c @Sign @CotutorInfo } }
+        }
+    }
+
+    # Índice de contenido
+    def @IndexOfContents
+    {
+        @MyCenter @B { ÍNDICE DE CONTENIDO }
+        //3.6f
+        @HExpand {} Pág.
+        //1.2f
+        @EntryList
+    }
+
+    def @Introduction
+        named @Tag { }
+        right @Body
+    {
+        @PageMark @Tag // @AddToIndex @Title { Introducción } @Tag { @Tag } //
+
+        @MyCenter @B INTRODUCCIÓN
+        //2.4f
+        @Body
+    }
+
+    def @Sumary
+        named compulsory @KeyWords { }
+        named @Tag { }
+        right @Body
+    {
+        @PageMark @Tag // @AddToIndex @Title { Resumen } @Tag { @Tag } //
+
+        1.2fx @Break {
+            { @MyLastName }, { @MyFirstName }. @B { ``@PaperTitle '' }. Trabajo Especial de Grado. @JN
+            La Universidad del Zulia. Facultad Experimental de Ciencias. División de Programas @JN
+            Especiales. Maracaibo, Venezuela. @Date @Format { @Year }. @PageOf { last.page }p.
+        }
+        //3.6f
+        @MyCenter @B RESUMEN
+        //2.4f
+        1.2fx @Break { @Body }
+        //3.6f
+        @B { Palabras claves }: @KeyWords
+        //1.2f
+        @B { Correo electrónico }: @MyEmail
+    }
+    
+    @Body
+}
