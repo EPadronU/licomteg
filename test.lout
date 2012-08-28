@@ -98,6 +98,8 @@ Finalmente, se plantean las conclusiones y recomendaciones obtenidas al culminar
     @Title { Planteamiento del Problema }
     @Tag { planteamiento }
 @Begin
+@AddToIndex @Title {  Planteamiento del Problema } @Tag {  planteamiento }
+
 @PP
 El uso de dispositivos móviles revolucionó la manera en que la humanidad se comunica, haciendo posible el realizar y recibir llamadas en cualquier lado, conectando y acercando a las personas cada vez más. Para muchos, en un principio, las llamadas por dispositivos móviles estaban fuera de su alcance, por el alto costo de esta nueva tecnología, en comparación con las tarifas que llevaban las compañías de telefonía fija. Es por esto que con la invención del envío de mensajes de texto, un formato reducido de comunicación, una creciente población adquirió teléfonos móviles para tener todos los beneficios de la movilidad de los celulares pero con bajo costo.
 @PP
@@ -114,6 +116,8 @@ Se requirió que la arquitectura fuese robusta y el servicio expuesto fuese fác
     @Title { Alcance del Problema }
     @Tag { alcance }
 @Begin
+@AddToIndex @Title { Alcance del Problema } @Tag { alcance }
+
 @PP
 En investigación estuvo delimitada a la creación de una arquitectura para la redacción de mensajes de texto usando reconocimiento automático de voz y un componente móvil, el cual consume el servicio de reconocimiento de voz ofrecido por esta arquitectura.
 @End @Section
@@ -122,11 +126,15 @@ En investigación estuvo delimitada a la creación de una arquitectura para la r
     @Title { Objetivos }
     @Tag { objetivos }
 @Begin
+@AddToIndex @Title { Objetivos } @Tag { objetivos }
+
 @BeginSubSections
 @SubSection
     @Title { Objetivo General }
     @Tag { obj.general }
 @Begin
+@AddToIndex @Title { Objetivo General } @Tag { obj.general }
+
 @PP
 Construir una arquitectura para la edición de mensajes de texto en dispositivos Móviles utilizando reconocimiento automático de voz.
 @End @SubSection
@@ -135,6 +143,8 @@ Construir una arquitectura para la edición de mensajes de texto en dispositivos
     @Title { Objetivos Específicos }
     @Tag { obj.especificos }
 @Begin
+@AddToIndex @Title { Objetivos Específicos } @Tag { obj.especificos }
+
 @PP
 @BulletList 
 @ListItem { Revisar literatura acerca del tema y aplicaciones existentes para el reconocimiento de voz e interacción con tales sistemas. }
@@ -153,6 +163,8 @@ Construir una arquitectura para la edición de mensajes de texto en dispositivos
     @Title { Justificación de la Investigación }
     @Tag { justificacion  }
 @Begin
+@AddToIndex @Title { Justificación de la Investigación } @Tag { justificacion  }
+
 @PP
 El interés original que motivó esta investigación es el de darle capacidades de reconocimiento de voz a sistemas de lingüística computacional desarrollados en los centros de investigación de La Universidad del Zulia. Estos esfuerzos de investigación requieren de un sistema de procesamiento de emisiones de voz con la capacidad de integración con múltiples tipos de interfaces de usuario, como por ejemplo un dispositivo móvil e incluso otros sistemas lingüísticos.
 @PP
@@ -167,6 +179,8 @@ La integración de reconocimiento de voz en sistemas de lingüística computacio
     @Title { Delimitación de la investigación. }
     @Tag { delimitacion }
 @Begin
+@AddToIndex @Title { Delimitación de la investigación. } @Tag { delimitacion }
+
 @PP
 La investigación se llevó a cabo en la Unidad de Lenguajes y Modelos Computacionales de la Facultad Experimental de Ciencias de la Universidad del Zulia y su duración fue de 16 meses. Se inició en el mes de noviembre de 2011 y culminó en marzo de 2012. La línea de investigación a la cual estuvo anexa fue: Lingüística Computacional.
 @End @Section

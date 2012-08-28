@@ -11,7 +11,7 @@ macro @FF { //1.2fx }
 macro @JN { &1s }
 
 # Páginas cuya numeración será omitida.
-macro @OmittedPages { 1 2 3 4 5 6 8 }
+macro @OmittedPages { 1 2 3 4 5 6 7 9 }
 
 
 ###############################################################################
@@ -36,7 +36,7 @@ def @IfNotInOmittedPages
     }
 }
 
-# Secuencia de puntos para el índice general.
+# Secuencia de puntos para los índices.
 def @Dots 
 {
     { @Dots }.
@@ -72,8 +72,52 @@ def @AddChapterToIndex into { @EntryPlace&&foll_or_prec }
    Capítulo { @Num }. @Title
 } 
 
+# Símbolo receptivo para una entrada en el índice de gráficos.
+def @GraphPlace
+{
+    @Galley
+}
+
+# Lista de entradas del índice de gráficos.
+def @GraphList
+{
+    @GraphPlace
+    //1.2f
+    @GraphList
+}
+
+# Galera que se encarga de añadir un gráfico en su índice.
+def @AddToGIndex into { @GraphPlace&&foll_or_prec }
+    named compulsory @Tag { }
+    named compulsory @Title { }
+{
+    @Title @Dots @PageOf @Tag
+}
+
+# Símbolo receptivo para una entrada en el índice de tablas.
+def @TablePlace
+{
+    @Galley
+}
+
+# Lista de entradas del índice de tablas.
+def @TableList
+{
+    @TablePlace
+    //1.2f
+    @TableList
+}
+
+# Galera que se encarga de añadir un gráfico en su índice.
+def @AddToTIndex into { @TablePlace&&foll_or_prec }
+    named compulsory @Tag { }
+    named compulsory @Title { }
+{
+    @Title @Dots @PageOf @Tag
+}
+
 # Símbolos visibles fuera de @TEG
-export @Abstract @Chapter @Cover @ExtraSection @Facade @IndexOfContents @Introduction @Sumary
+export @Abstract @Chapter @Cover @ExtraSection @Facade @IndexOfContents @IndexOfGraphics @IndexOfTables @Introduction @Sumary
 
 # El núcleo de este archivo de configuración
 def @TEG
@@ -91,8 +135,12 @@ def @TEG
         named @Tag { }
         right @Body
     {
-        @PageMark @Tag // @AddToIndex @Title { Abstract } @Tag { @Tag } //
-
+        @PageMark @Tag
+        // 
+        @AddToIndex
+            @Title { Abstract }
+            @Tag { @Tag }
+        //
         1.2fx @Break {
             { @MyLastName }, { @MyFirstName }. @B { ``@PaperTitle '' }. Trabajo Especial de Grado. @JN
             La Universidad del Zulia. Facultad Experimental de Ciencias. División de Programas @JN
@@ -100,7 +148,7 @@ def @TEG
         }
         //3.6f
         @MyCenter @B ABSTRACT
-        //2.4f
+        //1.2f
         1.2fx @Break { @Body }
         //3.6f
         @B { Key Words }: @KeyWords
@@ -113,10 +161,12 @@ def @TEG
         named compulsory @Title { }
         right @Body
     {
-        @AddChapterToIndex @Title { @Title } @Num { @Num }
+        @AddChapterToIndex
+            @Title { @Title }
+            @Num { @Num }
 
         @MyCenter @B { CAPÍTULO @Num //1.2fx @Title }
-        //1.2f
+        //
         @Body
     }
 
@@ -158,17 +208,23 @@ def @TEG
         @MyCenter { Maracaibo, @Month de @Year }
     }
 
-    # Para dedicatoria, reconocimiento y agradecimiento
+    # Para dedicatoria, reconocimiento, agradecimientos, entre otros.
     def @ExtraSection
+        named @AlterTitle { dfl }
         named @Tag { }
         named compulsory @Title { }
         right @Body
     {
-        @PageMark @Tag // @AddToIndex @Title { @Title } @Tag { @Tag } //
+        @PageMark @Tag
+        //
+        @AddToIndex
+            @Title { @AlterTitle @Case { dfl @Yield @Title else @Yield @AlterTitle } }
+            @Tag { @Tag }
+        //
 
         @MyCenter @B @Title
-        //2.4f
-        @Body
+        //1.2f
+        1.2fx @Break @Body
     }
 
     # Frontispicio
@@ -202,7 +258,7 @@ def @TEG
         }
     }
 
-    # Índice de contenido
+    # Índice de contenido.
     def @IndexOfContents
     {
         @MyCenter @B { ÍNDICE DE CONTENIDO }
@@ -212,14 +268,38 @@ def @TEG
         @EntryList
     }
 
+    # Índice de gráficos.
+    def @IndexOfGraphics
+    {
+        @MyCenter @B { ÍNDICE DE GRÁFICOS }
+        @HExpand {} Pág.
+        //1.2f
+        @GraphList
+    }
+
+    # Índice de tablas.
+    def @IndexOfTables
+    {
+        @MyCenter @B { ÍNDICE DE TABLAS }
+        //3.6f
+        @HExpand {} Pág.
+        //1.2f
+        @TableList
+    }
+
     def @Introduction
         named @Tag { }
         right @Body
     {
-        @PageMark @Tag // @AddToIndex @Title { Introducción } @Tag { @Tag } //
+        @PageMark @Tag
+        //
+        @AddToIndex
+            @Title { Introducción }
+            @Tag { @Tag }
+        //
 
         @MyCenter @B INTRODUCCIÓN
-        //2.4f
+        //1.2f
         @Body
     }
 
@@ -228,7 +308,12 @@ def @TEG
         named @Tag { }
         right @Body
     {
-        @PageMark @Tag // @AddToIndex @Title { Resumen } @Tag { @Tag } //
+        @PageMark @Tag
+        //
+        @AddToIndex
+            @Title { Resumen }
+            @Tag { @Tag }
+        //
 
         1.2fx @Break {
             { @MyLastName }, { @MyFirstName }. @B { ``@PaperTitle '' }. Trabajo Especial de Grado. @JN
@@ -237,7 +322,7 @@ def @TEG
         }
         //3.6f
         @MyCenter @B RESUMEN
-        //2.4f
+        //1.2f
         1.2fx @Break { @Body }
         //3.6f
         @B { Palabras claves }: @KeyWords

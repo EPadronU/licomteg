@@ -1,0 +1,175 @@
+00 Basser Lout Version 3.39 (September 2010) database index file
+00symbol 10 @BasicSetup @DocumentSetup @FigureCounterMarker
+00symbol 11 @BasicSetup @DocumentSetup @TablePrefixMarker
+00symbol 12 @BasicSetup @DocumentSetup @TableCounterMarker
+00symbol 13 @BasicSetup @DocumentSetup @FloaterPrefixMarker
+00symbol 14 @BasicSetup @DocumentSetup @FloaterCounterMarker
+00symbol 15 @BasicSetup @PageMarker
+00symbol 16 @BasicSetup @DocumentSetup @FootNoteCounterMarker
+00symbol 17 @BasicSetup @DocumentSetup @Runner
+00symbol 18 @TEG @ExtraSection
+00symbol 19 @TEG @Sumary
+00symbol 1 @BasicSetup @DocumentSetup @TheoremCounterMarker
+00symbol 20 @TEG @Abstract
+00symbol 22 @AddToIndex
+00symbol 23 @TEG @Introduction
+00symbol 24 @BasicSetup @DocumentSetup @OrdinarySetup @SectionList
+00symbol 25 @BasicSetup @DocumentSetup @OrdinarySetup @Text @Section
+00symbol 26 @BasicSetup @NumberMarker
+00symbol 27 @BasicSetup @TitleMarker
+00symbol 28 @BasicSetup @DocumentSetup @OrdinarySetup @SubSectionList
+00symbol 29 @BasicSetup @DocumentSetup @OrdinarySetup @Text @Section @SubSection
+00symbol 2 @BasicSetup @DocumentSetup @DefinitionCounterMarker
+00symbol 30 @BasicSetup listitem
+00symbol 3 @BasicSetup @DocumentSetup @ClaimCounterMarker
+00symbol 4 @BasicSetup @DocumentSetup @PropositionCounterMarker
+00symbol 5 @BasicSetup @DocumentSetup @LemmaCounterMarker
+00symbol 6 @BasicSetup @DocumentSetup @CorollaryCounterMarker
+00symbol 7 @BasicSetup @DocumentSetup @ExampleCounterMarker
+00symbol 8 @BasicSetup @NumDispCounterMarker
+00symbol 9 @BasicSetup @DocumentSetup @FigurePrefixMarker
+00target 21 @EntryPlace
+021&tmp.lout&1	00002	00034	16111	355	tmp.lout
+021&tmp.lout&1	00003	00035	16919	400	tmp.lout
+021&tmp.lout&1	00004	00036	18798	445	tmp.lout
+021&tmp.lout&1	00005	00142	49456	805	tmp.lout
+021&tmp.lout&1	00006	00143	53643	874	tmp.lout
+021&tmp.lout&1	00007	00144	64129	1079	tmp.lout
+10&9.3770.tmp.lout.1	0	00010	1392	102	tmp.lout
+11&9.4008.tmp.lout.1	0	00011	1475	109	tmp.lout
+12&9.4016.tmp.lout.1	0	00012	1555	116	tmp.lout
+13&9.4244.tmp.lout.1	0	00013	1637	123	tmp.lout
+14&9.4252.tmp.lout.1	0	00014	1719	130	tmp.lout
+15&11.168.tmp.lout.1	0	00023	2513	198	tmp.lout
+15&11.227.tmp.lout.1	0	00045	49113	775	tmp.lout
+15&11.243.tmp.lout.1	0	00027	16503	370	tmp.lout
+15&11.89.tmp.lout.1	0	00031	18380	414	tmp.lout
+15&4.1230.tmp.lout.1	0	00015	1803	137	tmp.lout
+15&4.1230.tmp.lout.10	0	00059	67059	1122	tmp.lout
+15&4.1230.tmp.lout.11	0	00127	83349	1913	tmp.lout
+15&4.1230.tmp.lout.2	0	00018	2248	176	tmp.lout
+15&4.1230.tmp.lout.3	0	00020	2513	198	tmp.lout
+15&4.1230.tmp.lout.4	0	00024	16503	370	tmp.lout
+15&4.1230.tmp.lout.5	0	00028	18380	414	tmp.lout
+15&4.1230.tmp.lout.6	0	00032	20037	459	tmp.lout
+15&4.1230.tmp.lout.7	0	00042	49113	775	tmp.lout
+15&4.1230.tmp.lout.8	0	00046	53106	829	tmp.lout
+15&4.1230.tmp.lout.9	0	00048	53372	851	tmp.lout
+15&4.1748.tmp.lout.1	0	00093	67059	1122	tmp.lout
+15&4.1748.tmp.lout.2	0	00097	67059	1122	tmp.lout
+15&4.1748.tmp.lout.3	0	00101	67059	1122	tmp.lout
+15&4.1748.tmp.lout.4	0	00105	67059	1122	tmp.lout
+15&4.1748.tmp.lout.5	0	00109	67059	1122	tmp.lout
+15&4.1748.tmp.lout.6	0	00113	67059	1122	tmp.lout
+15&4.1748.tmp.lout.7	0	00117	67059	1122	tmp.lout
+15&alcance	0	00064	67059	1122	tmp.lout
+15&delimitacion	0	00133	83349	1913	tmp.lout
+15&justificacion	0	00122	67059	1122	tmp.lout
+15&last.page	0	00141	83349	1913	tmp.lout
+15&obj.especificos	0	00086	67059	1122	tmp.lout
+15&objetivos	0	00073	67059	1122	tmp.lout
+15&obj.general	0	00080	67059	1122	tmp.lout
+15&planteamiento	0	00053	53372	851	tmp.lout
+16&9.1551.tmp.lout.1	0	00016	2100	163	tmp.lout
+16&9.1551.tmp.lout.10	0	00060	67244	1137	tmp.lout
+16&9.1551.tmp.lout.11	0	00128	83539	1929	tmp.lout
+16&9.1551.tmp.lout.2	0	00019	2428	191	tmp.lout
+16&9.1551.tmp.lout.3	0	00021	2699	214	tmp.lout
+16&9.1551.tmp.lout.4	0	00025	16683	385	tmp.lout
+16&9.1551.tmp.lout.5	0	00029	18566	430	tmp.lout
+16&9.1551.tmp.lout.6	0	00033	20218	474	tmp.lout
+16&9.1551.tmp.lout.7	0	00043	49299	791	tmp.lout
+16&9.1551.tmp.lout.8	0	00047	53287	844	tmp.lout
+16&9.1551.tmp.lout.9	0	00049	53558	867	tmp.lout
+17&9.952.tmp.lout.1	0	00140	86494	2104	tmp.lout
+17&9.952.tmp.lout.10	0	00121	80214	1809	tmp.lout
+17&9.952.tmp.lout.11	0	00129	83625	1936	tmp.lout
+17&9.952.tmp.lout.12	0	00132	84181	1974	tmp.lout
+17&9.952.tmp.lout.13	0	00138	86051	2075	tmp.lout
+17&9.952.tmp.lout.2	0	00017	2185	170	tmp.lout
+17&9.952.tmp.lout.3	0	00139	86428	2098	tmp.lout
+17&9.952.tmp.lout.4	0	00052	60270	972	tmp.lout
+17&9.952.tmp.lout.5	0	00058	66683	1099	tmp.lout
+17&9.952.tmp.lout.6	0	00063	67490	1159	tmp.lout
+17&9.952.tmp.lout.7	0	00069	69243	1260	tmp.lout
+17&9.952.tmp.lout.8	0	00072	69765	1298	tmp.lout
+17&9.952.tmp.lout.9	0	00118	79662	1771	tmp.lout
+18&11.168.tmp.lout.1	0	00022	2784	221	tmp.lout
+19&11.243.tmp.lout.1	0	00026	16768	392	tmp.lout
+1&9.2859.tmp.lout.1	0	00001	0	1	tmp.lout
+20&11.89.tmp.lout.1	0	00030	18651	437	tmp.lout
+22&11.168.tmp.lout.1	0	00037	20303	481	tmp.lout
+22&11.227.tmp.lout.1	0	00040	36524	655	tmp.lout
+22&11.243.tmp.lout.1	0	00038	33822	627	tmp.lout
+22&11.89.tmp.lout.1	0	00039	35284	641	tmp.lout
+22&planteamiento	0	00041	40175	679	tmp.lout
+23&11.227.tmp.lout.1	0	00044	49384	798	tmp.lout
+24&10.189.tmp.lout.1	0	00050	60048	952	tmp.lout
+24&10.189.tmp.lout.2	0	00061	67330	1144	tmp.lout
+24&10.189.tmp.lout.3	0	00070	69614	1283	tmp.lout
+24&10.189.tmp.lout.4	0	00119	80035	1794	tmp.lout
+24&10.189.tmp.lout.5	0	00130	84003	1959	tmp.lout
+24&alcance	0	00065	67330	1144	tmp.lout
+24&delimitacion	0	00134	84003	1959	tmp.lout
+24&justificacion	0	00123	80035	1794	tmp.lout
+24&objetivos	0	00074	69614	1283	tmp.lout
+24&planteamiento	0	00054	60048	952	tmp.lout
+25&alcance	0	00062	67403	1151	tmp.lout
+25&delimitacion	0	00131	84076	1966	tmp.lout
+25&justificacion	0	00120	80108	1801	tmp.lout
+25&objetivos	0	00071	69687	1290	tmp.lout
+25&planteamiento	0	00051	60121	959	tmp.lout
+26&4.1200.tmp.lout.1	0	00090	76621	1609	tmp.lout
+26&4.1200.tmp.lout.2	0	00094	77875	1651	tmp.lout
+26&4.1200.tmp.lout.3	0	00098	78205	1671	tmp.lout
+26&4.1200.tmp.lout.4	0	00102	78503	1691	tmp.lout
+26&4.1200.tmp.lout.5	0	00106	78774	1711	tmp.lout
+26&4.1200.tmp.lout.6	0	00110	79049	1731	tmp.lout
+26&4.1200.tmp.lout.7	0	00114	79386	1751	tmp.lout
+26&4.1748.tmp.lout.1	0	00092	76621	1609	tmp.lout
+26&4.1748.tmp.lout.2	0	00096	77875	1651	tmp.lout
+26&4.1748.tmp.lout.3	0	00100	78205	1671	tmp.lout
+26&4.1748.tmp.lout.4	0	00104	78503	1691	tmp.lout
+26&4.1748.tmp.lout.5	0	00108	78774	1711	tmp.lout
+26&4.1748.tmp.lout.6	0	00112	79049	1731	tmp.lout
+26&4.1748.tmp.lout.7	0	00116	79386	1751	tmp.lout
+26&alcance	0	00066	68756	1220	tmp.lout
+26&delimitacion	0	00135	85554	2035	tmp.lout
+26&justificacion	0	00124	82850	1873	tmp.lout
+26&obj.especificos	0	00088	74997	1541	tmp.lout
+26&objetivos	0	00075	71910	1383	tmp.lout
+26&obj.general	0	00082	73806	1469	tmp.lout
+26&planteamiento	0	00055	63634	1039	tmp.lout
+27&alcance	0	00067	68918	1235	tmp.lout
+27&delimitacion	0	00136	85721	2050	tmp.lout
+27&justificacion	0	00125	83018	1888	tmp.lout
+27&obj.especificos	0	00089	76540	1602	tmp.lout
+27&objetivos	0	00076	72074	1398	tmp.lout
+27&obj.general	0	00083	74744	1519	tmp.lout
+27&planteamiento	0	00056	63800	1054	tmp.lout
+28&10.196.tmp.lout.1	0	00078	72395	1423	tmp.lout
+28&10.196.tmp.lout.2	0	00084	74821	1526	tmp.lout
+28&obj.especificos	0	00087	74821	1526	tmp.lout
+28&obj.general	0	00081	72395	1423	tmp.lout
+2&9.2918.tmp.lout.1	0	00002	219	17	tmp.lout
+29&obj.especificos	0	00085	74897	1533	tmp.lout
+29&obj.general	0	00079	72471	1430	tmp.lout
+30&4.1748.tmp.lout.1	0	00091	77679	1644	tmp.lout
+30&4.1748.tmp.lout.2	0	00095	78038	1664	tmp.lout
+30&4.1748.tmp.lout.3	0	00099	78368	1684	tmp.lout
+30&4.1748.tmp.lout.4	0	00103	78666	1704	tmp.lout
+30&4.1748.tmp.lout.5	0	00107	78937	1724	tmp.lout
+30&4.1748.tmp.lout.6	0	00111	79212	1744	tmp.lout
+30&4.1748.tmp.lout.7	0	00115	79549	1764	tmp.lout
+3&9.2973.tmp.lout.1	0	00003	368	27	tmp.lout
+4&9.3028.tmp.lout.1	0	00004	507	37	tmp.lout
+5&9.3083.tmp.lout.1	0	00005	658	47	tmp.lout
+6&9.3138.tmp.lout.1	0	00006	797	57	tmp.lout
+7&9.3193.tmp.lout.1	0	00007	944	67	tmp.lout
+8&4.1429.tmp.lout.1	0	00008	1087	77	tmp.lout
+8&4.1429.tmp.lout.2	0	00057	63878	1061	tmp.lout
+8&4.1429.tmp.lout.3	0	00068	68991	1242	tmp.lout
+8&4.1429.tmp.lout.4	0	00077	72143	1405	tmp.lout
+8&4.1429.tmp.lout.5	0	00126	83097	1895	tmp.lout
+8&4.1429.tmp.lout.6	0	00137	85799	2057	tmp.lout
+9&9.3762.tmp.lout.1	0	00009	1311	95	tmp.lout
