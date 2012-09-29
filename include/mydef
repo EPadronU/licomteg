@@ -137,12 +137,10 @@ def @TEG
     {
         @PageMark @Tag
         // 
-        @AddToIndex
-            @Title { Abstract }
-            @Tag { @Tag }
+        @AddToIndex @Title { Abstract } @Tag { @Tag }
         //
         1.2fx @Break {
-            { @MyLastName }, { @MyFirstName }. @B { ``@PaperTitle '' }. Trabajo Especial de Grado. @JN
+            { @MyLastName }, { @MyFirstName }. @B { ``@PaperTitle'' }. Trabajo Especial de Grado. @JN
             La Universidad del Zulia. Facultad Experimental de Ciencias. División de Programas @JN
             Especiales. Maracaibo, Venezuela. @Date @Format { @Year }. @PageOf { last.page }p.
         }
@@ -161,9 +159,7 @@ def @TEG
         named compulsory @Title { }
         right @Body
     {
-        @AddChapterToIndex
-            @Title { @Title }
-            @Num { @Num }
+        @AddChapterToIndex @Title { @Title } @Num { @Num }
 
         @MyCenter @B { CAPÍTULO @Num //1.2fx @Title }
         //
@@ -217,9 +213,7 @@ def @TEG
     {
         @PageMark @Tag
         //
-        @AddToIndex
-            @Title { @AlterTitle @Case { dfl @Yield @Title else @Yield @AlterTitle } }
-            @Tag { @Tag }
+        @AddToIndex @Title { @AlterTitle @Case { dfl @Yield @Title else @Yield @AlterTitle } } @Tag { @Tag }
         //
 
         @MyCenter @B @Title
@@ -293,9 +287,7 @@ def @TEG
     {
         @PageMark @Tag
         //
-        @AddToIndex
-            @Title { Introducción }
-            @Tag { @Tag }
+        @AddToIndex @Title { Introducción } @Tag { @Tag }
         //
 
         @MyCenter @B INTRODUCCIÓN
@@ -310,9 +302,7 @@ def @TEG
     {
         @PageMark @Tag
         //
-        @AddToIndex
-            @Title { Resumen }
-            @Tag { @Tag }
+        @AddToIndex @Title { Resumen } @Tag { @Tag }
         //
 
         1.2fx @Break {

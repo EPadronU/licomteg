@@ -3,7 +3,7 @@ all:
 	make pdf &> /dev/null
 	make pdf
 
-clear:
+clean:
 	rm -f lout.li
 	rm -f tmp*
 
@@ -17,4 +17,4 @@ pdf:
 	ps2pdf tmp.ps test.pdf
 
 v:
-	mupdf test.pdf
+	evince test.pdf
