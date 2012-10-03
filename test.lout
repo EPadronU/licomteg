@@ -1,4 +1,3 @@
-# vim: spell spelllang=es
 @Include { "include/licomteg" }
 
 @Doc @Text @Begin

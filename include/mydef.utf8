@@ -172,8 +172,8 @@ def @TEG
         named compulsory @Tutor { }
         named conpulsory @Year { }
     {
-        @MyCenter {
-            #0.10 @Scale @IncludeGraphic "./include/img/logo luz.eps"
+        |1.4c {
+            { 0.55 @Scale @IncludeGraphic "./include/img/logo-luz.eps" }
             ||0.2c
             @MyCenter {
                 REPÚBLICA BOLIVARIANA DE VENEZUELA @FF
@@ -183,7 +183,7 @@ def @TEG
                 LICENCIATURA EN COMPUTACIÓN
             }
             ||0.2c
-            #0.17 @Scale @IncludeGraphic "./include/img/logo fec.eps"
+            { @IncludeGraphic "./include/img/logo-fec.eps" }
         }
         //10.8f
         @MyCenter @Options { 1.2fx } @B { @PaperTitle }
