@@ -11,7 +11,7 @@ macro @FF { //1.2fx }
 macro @JN { &1s }
 
 # Páginas cuya numeración será omitida.
-macro @OmittedPages { 1 2 3 4 5 6 7 9 }
+macro @OmittedPages { 1 2 3 4 5 6 7 8 10 13 }
 
 
 ###############################################################################
@@ -266,6 +266,7 @@ def @TEG
     def @IndexOfGraphics
     {
         @MyCenter @B { ÍNDICE DE GRÁFICOS }
+        //3.6f
         @HExpand {} Pág.
         //1.2f
         @GraphList

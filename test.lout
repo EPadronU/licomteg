@@ -59,6 +59,10 @@ The objective of this research is to develop a prototype interface for SMS editi
 
 @NP
 
+@IndexOfGraphics
+
+@NP
+
 @Introduction {
 @PP
 El mundo de las telecomunicaciones ha ofrecido desde sus comienzos una serie de beneficios tecnológicos que se han aprovechado correctamente; sin embargo, con el transcurso del tiempo han surgido nuevas necesidades y nuevos requerimientos, entre ellos la movilidad y flexibilidad en las comunicaciones.
@@ -97,7 +101,7 @@ Finalmente, se plantean las conclusiones y recomendaciones obtenidas al culminar
     @Title { Planteamiento del Problema }
     @Tag { planteamiento }
 @Begin
-@AddToIndex @Title {  Planteamiento del Problema } @Tag {  planteamiento }
+@AddToIndex @Title { Planteamiento del Problema } @Tag { planteamiento }
 
 @PP
 El uso de dispositivos móviles revolucionó la manera en que la humanidad se comunica, haciendo posible el realizar y recibir llamadas en cualquier lado, conectando y acercando a las personas cada vez más. Para muchos, en un principio, las llamadas por dispositivos móviles estaban fuera de su alcance, por el alto costo de esta nueva tecnología, en comparación con las tarifas que llevaban las compañías de telefonía fija. Es por esto que con la invención del envío de mensajes de texto, un formato reducido de comunicación, una creciente población adquirió teléfonos móviles para tener todos los beneficios de la movilidad de los celulares pero con bajo costo.
@@ -160,9 +164,9 @@ Construir una arquitectura para la edición de mensajes de texto en dispositivos
 
 @Section
     @Title { Justificación de la Investigación }
-    @Tag { justificacion  }
+    @Tag { justificacion }
 @Begin
-@AddToIndex @Title { Justificación de la Investigación } @Tag { justificacion  }
+@AddToIndex @Title { Justificación de la Investigación } @Tag { justificacion }
 
 @PP
 El interés original que motivó esta investigación es el de darle capacidades de reconocimiento de voz a sistemas de lingüística computacional desarrollados en los centros de investigación de La Universidad del Zulia. Estos esfuerzos de investigación requieren de un sistema de procesamiento de emisiones de voz con la capacidad de integración con múltiples tipos de interfaces de usuario, como por ejemplo un dispositivo móvil e incluso otros sistemas lingüísticos.
@@ -186,5 +190,186 @@ La investigación se llevó a cabo en la Unidad de Lenguajes y Modelos Computaci
 @EndSections
 @End @Chapter
 
+@NP
+
+@Chapter
+    @Title { Marco Teórico }
+    @Num { 2 }
+@Begin
+@BeginSections
+@Section
+    @Title { Antecedentes de la Investigación }
+    @Tag { antecedentes }
+@Begin
+@AddToIndex @Title { Antecedentes de la Investigación } @Tag { antecedentes }
+
+@PP
+En la actualidad el campo de investigación en torno al tema de los sistemas de reconocimiento automático de voz a nivel internacional tiene más de dos década de historia. Pero la aplicación de estas tecnologías en dispositivos móviles es de reciente data. Entre estas, se pueden mencionar los siguientes:
+//2.4f
+@BulletList
+@ListItem { Google Voice Search }
+@ListInterruptItem {
+"    "El producto Search by voice (2) (en español: ``búsqueda por voz'') es la tecnología desarrollada por Google para realizar búsquedas web en PC y teléfonos móviles. La premisa de Voice Search es habilitar al dispositivo usado para buscar datos basados en una entrada de búsqueda en forma de una emisión de voz, que describe el parámetro de búsqueda.
+@PP
+El servicio está disponible en dispositivos móviles a través de una aplicación nativa, disponible para el sistema operativo iOS y para Android. En el caso de las PC, está disponible a través de su navegador web Google Chrome, como un elemento html de entrada con la característica habilitada, usando la clase x-webkit-speech. Actualmente, no tiene soporte para español.
+@PP
+El esquema de trabajo de este producto es basado en un servicio web, expuesto siguiendo la metodología REST para exposición de recursos en internet, que recibe la voz proveniente de los dispositivos capaces de enviar audio y retorna en texto la hipótesis de reconocimiento. El corpus de optimizado para interpretar frases o términos usualmente usados en el contexto de búsquedas de internet.
+@PP
+Dado la naturaleza privativa de la solución, no se dispone de mayor información sobre la arquitectura de reconocimiento que usa Google Voice Search.
+
+//1.2f
+@Figure
+    @Caption { Google Voice. Fuente: Google Inc. (2012) } 
+    @Location { Raw }
+    @Tag { gvoice }
+{
+    @AddToGIndex @Title {  Google Voice. Fuente: Google Inc. (2012) } @Tag { gvoice }
+    0.4 @Scale @IncludeGraphic "img/gvoice.eps"
+} 
+//1.2f
+}
+
+@ListItem { Siri  }
+@ListInterruptItem {
+"    "Siri es una aplicación asistente personal para el sistema operativo móvil de Apple, iOS. La aplicación utiliza reconocimiento de voz y posterior procesamiento de lenguaje natural para responder preguntas, hacer recomendaciones y realizar acciones mediante la delegación de las solicitudes a un conjunto de servicios web que va en aumento. El esquema de trabajo de Siri está basado en un servicio web que, de igual manera que Google Voice Search, envía la emisión de voz a un servidor para su reconocimiento.
+@PP
+Siri utiliza conocimiento resultado de más de 40 años de investigación fundada por DARPA a través del Centro de Inteligencia Artificial de SRI International, una organización originada dentro de la Universidad de Stanford.
+@PP
+Actualmente no tiene soporte para español; solo dispone de inglés, alemán, francés y 
+japonés como idiomas de reconocimiento (3).
+
+//1.2f
+@Figure
+    @Caption  { Siri. Fuente: Apple Inc. (2012) }
+    @Location { Raw }
+    @Tag { siri }
+{
+    @AddToGIndex @Title { Siri. Fuente: Apple Inc. (2012) } @Tag { siri }
+    0.5 @Scale @IncludeGraphic "img/siri.eps" 
+} 
+}
+@EndList
+@End @Section
+
+@Section
+    @Title { Bases Teóricas }
+    @Tag { bases.teoricas }
+@Begin
+@AddToIndex @Title { Bases Teóricas } @Tag { bases.teoricas }
+
+@BeginSubSections
+@SubSection
+    @Title { Reconocedor de Voz }
+    @Tag { reconocedor.voz }
+@Begin
+@AddToIndex @Title { Reconocedor de Voz } @Tag { reconocedor.voz }
+
+@PP
+Son sistemas con tecnología que puede traducir palabras habladas en texto. Algunos sistemas de reconocimiento de voz usan ''entrenamiento`` donde una persona lee secciones de texto dentro del sistema. Estos sistemas analizan las características específicas de la voz de la persona y la utilizan para afinar el reconocimiento, resultando en transcripción más exacta. Existen dos tipos de reconocedores de voz: Son llamados ''independientes del hablante`` los sistemas que pueden reconocer una variedad de hablantes, sin ningún entrenamiento. Este tipo de software generalmente limita el número de palabras en un vocabulario, pero es la única opción realística para ciertas aplicaciones que deban aceptar entrada de voz proveniente de un número grande de usuarios. Por otro lado los sistemas que usan entrenamiento son llamados ''dependientes del hablante``, los cuales solo son capaces de reconocer la voz de los usuarios con los cuales fue entrenado (4).
+@End @SubSection
+
+@SubSection
+    @Title { Modelo Acústico }
+    @Tag { modelo.acustico }
+@Begin
+@AddToIndex @Title { Modelo Acústico } @Tag { modelo.acustico }
+
+@PP
+Un modelo acústico es un archivo que contiene representaciones estadísticas de cada sonido distinto que compone una palabra; cada una de estas representaciones se le asigna una etiqueta llamada fonema. Este modelo es creado tomando grabaciones de audio del habla y transcripciones de texto asociados, y luego haciendo uso de software para generar las representaciones estadísticas de los sonidos que crea cada palabra (5).
+@End @SubSection
+
+@SubSection
+    @Title { Diccionario Fonético }
+    @Tag { diccionario.fonetico }
+@Begin
+@AddToIndex @Title { Diccionario Fonético } @Tag { diccionario.fonetico }
+
+@PP
+Un diccionario fonético es un vocabulario que permite localizar palabras por la forma en la que suenan. Estos diccionarios son útiles cuando la ortografía de una palabra es desconocida. Este pareo no es siempre muy efectivo, pero es práctico la mayoría de las veces (5).
+@End @SubSection
+
+@SubSection
+    @Title { Modelo del Lenguaje }
+    @Tag { modelo.lenguaje }
+@Begin
+@AddToIndex @Title { Modelo del Lenguaje } @Tag { modelo.lenguaje }
+
+@PP
+Un modelo del lenguaje es un archivo que contiene una lista larga de palabras y su probabilidad de ocurrencia. Es usado en aplicaciones de dictado para restringir la búsqueda de palabras. Este define cuál palabra puede seguir qué palabras previamente reconocidas y ayuda a restringir significativamente el proceso de pareo mediante la eliminación de palabras que no son probables. Los modelos de lenguaje más comúnmente usados son modelos de n-grama, los cuales contienen estadísticas de secuencias de palabras (5).
+@End @SubSection
+
+@SubSection
+    @Title { Corpus de Voz }
+    @Tag { corpus.voz }
+@Begin
+@AddToIndex @Title { Corpus de Voz } @Tag { corpus.voz }
+
+@PP
+La idea de un corpus de voz nace del origen mismo de la comunicación en los seres humanos. La creación de registros históricos del habla se remonta a los primeros experimentos de Tomas Edison, que fue quien abrió a la humanidad las puertas de este complejo universo. Los avances tecnológicos del siglo XX progresivamente posibilitaron hacer grabaciones de mayor calidad; inicialmente los elementos magnetofónicos protagonizaron la industria de los registros sonoros, sin embargo durante las últimas décadas se han desarrollado técnicas de digitalización que han incrementado notablemente la calidad de las grabaciones, y han posibilitado el uso del procesamiento digital de señales; estas técnicas derivaron (de entre muchos otros experimentos) en el desarrollo de tecnologías del habla, como por ejemplo reconocimiento de la voz (5).
+@End @SubSection
+
+@SubSection
+    @Title { HTTP }
+    @Tag { http }
+@Begin
+@AddToIndex @Title { HTTP } @Tag { http }
+
+@PP
+Hypertext Transfer Protocol o HTTP (en español: protocolo de transferencia de hipertexto) es el protocolo usado en cada transacción sobre la World Wide Web. Es un protocolo orientado a transacciones y sigue el esquema petición-respuesta entre un cliente y un servidor. Al cliente que efectúa la petición (un navegador web o un spider) se lo conoce como ''user agent`` (agente del usuario). A la información transmitida se la llama ''recurso`` y se la identifica mediante un localizador uniforme de recursos (por sus siglas en ingles: URL). Los recursos pueden ser archivos, el resultado de la ejecución de un programa, una consulta a una base de datos, la traducción automática de un documento, etc (6).
+@End @SubSection
+
+@SubSection
+    @Title { Códec }
+    @Tag { codec }
+@Begin
+@AddToIndex @Title { Códec } @Tag { codec }
+
+@PP
+Códec es la abreviatura de codificador-decodificador. Describe una especificación desarrollada en software, hardware o una combinación de ambos, capaz de transformar un archivo con un flujo de datos (en ingles: stream) o una señal. Los códecs pueden codificar el flujo o la señal (a menudo para la transmisión, el almacenaje o el cifrado) y recuperarlo o descifrarlo del mismo modo para la reproducción o la manipulación en un formato más apropiado para estas operaciones. Los códecs son usados a menudo en videoconferencias y emisiones de medios de comunicación (7).
+@End @SubSection
+
+@SubSection
+    @Title { JSON }
+    @Tag { json }
+@Begin
+@AddToIndex @Title { JSON } @Tag { json }
+
+@PP
+JSON, acrónimo de JavaScript Object Notation, es un formato ligero para el intercambio de datos, basado en texto y diseñado como contenedor para intercambio de datos. Es derivado del lenguaje Javascript, donde es usado para representar estructuras de datos y arreglos asociativos.  La simplicidad de JSON ha dado lugar a la generalización de su uso. El formato JSON se emplea habitualmente en entornos donde el tamaño del flujo de datos entre cliente y servidor es de vital importancia (8).
+@End @SubSection
+
+@SubSection
+    @Title { JavaScript }
+    @Tag { javascript }
+@Begin
+@AddToIndex @Title { JavaScript } @Tag { javascript }
+
+@PP
+JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se utiliza principalmente en su forma del lado del cliente, implementado como parte de un navegador web permitiendo mejoras en la interfaz de usuario y páginas web dinámicas, en bases de datos locales al navegador (9).
+@End @SubSection
+
+@SubSection
+    @Title { SMS }
+    @Tag { sms }
+@Begin
+@AddToIndex @Title { SMS } @Tag { sms }
+
+@PP
+El servicio de mensajes cortos o SMS (del inglés: Short Message Service) es un servicio disponible en los teléfonos móviles que permite el envío de mensajes cortos (también conocidos como mensajes de texto, o más coloquialmente, textos) entre teléfonos móviles, teléfonos fijos y otros dispositivos de mano (10).
+@End @SubSection
+
+@SubSection
+    @Title { Smartphone }
+    @Tag { smarthphone }
+@Begin
+@AddToIndex @Title { Smartphone } @Tag { smarthphone }
+
+@PP
+Un teléfono inteligente (del ingles: smartphone) es un teléfono móvil construido sobre una plataforma de informática móvil, más la capacidad de computación avanzada y conectividad de un teléfono móvil, con la posibilidad de instalar aplicaciones para cualquier uso. El término «inteligente» hace referencia a la capacidad de usarse como un computador de bolsillo, llegando incluso a remplazar a un computador personal en algunos casos (11).
+@End @SubSection
+@EndSubSections
+@End @Section
+@EndSections
+@End @Chapter
 @End @TEG
 @End @Text
