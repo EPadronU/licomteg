@@ -37,7 +37,7 @@ Agrega al índice de tablas el tag con el título descriptivo proporcionados.
     @KeyWords { }
   { }
 
-Genera el abstract del TEG. Recibe como parámetros las palabras claves.
+Genera el abstract del TEG. Recibe como parámetro las palabras claves.
 
 
 - @Chapter
@@ -53,8 +53,7 @@ Contiene las secciones pertenecientes al mismo.
     [@Cotutor { }]
     @Month { }
     @Tutor { }
-    @Year
-  { }
+    @Year { }
 
 Genera la portada del TEG. Recibe como parámetros el mes y año de entrega,
 además del nombre del tutor y opcionalmente el cotutor.
@@ -72,8 +71,7 @@ alternativo usado en el índice de contenidos.
 
 - @Facade
     [@CotutorInfo { }]
-    @TutorInfo
-  { }
+    @TutorInfo { }
 
 Genera el frontispicio. Recibe como parámetros la información del tutor y
 opcionalmente la información de cotutor.
@@ -99,9 +97,11 @@ Genera el índice de tablas.
 Genera la introducción.
 
 
-- @Sumary @KeyWords { } { }
+- @Sumary
+    @KeyWords { }
+  { }
 
-Genera el resumen del TEG. Recibe por parámetro las palabras claves.
+Genera el resumen del TEG. Recibe como parámetro las palabras claves.
 
 
 - @TEG
