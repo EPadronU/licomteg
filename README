@@ -1,0 +1,119 @@
+#######################################
+# Omitir la paginación
+#######################################
+
+En el archivo mydef se encuentra definida una macro llamada @OmittedPages, en
+ésta se deben incluir el número de las páginas cuya paginación será omitida
+separadas por un espacio.
+
+
+#######################################
+# Símbolos en licomteg
+#######################################
+
+- @AddToIndex
+    @Tag { }
+    @Title { }
+
+Agrega al índice de contenidos el tag con el título descriptivo proporcionados.
+Útil para añadir las secciones y sub-secciones de los capítulos.
+
+
+- @AddToGIndex
+    @Tag { }
+    @Title { }
+
+Agrega al índice de gráficos el tag con el título descriptivo proporcionados.
+
+
+- @AddToTIndex
+    @Tag { }
+    @Title { }
+
+Agrega al índice de tablas el tag con el título descriptivo proporcionados.
+
+
+- @Abstract
+    @KeyWords { }
+  { }
+
+Genera el abstract del TEG. Recibe como parámetros las palabras claves.
+
+
+- @Chapter
+    @Num { }
+    @Title { }
+  { }
+
+Genera un capítulo. Recibe como parámetros el número y título del capítulo.
+Contiene las secciones pertenecientes al mismo.
+
+
+- @Cover
+    [@Cotutor { }]
+    @Month { }
+    @Tutor { }
+    @Year
+  { }
+
+Genera la portada del TEG. Recibe como parámetros el mes y año de entrega,
+además del nombre del tutor y opcionalmente el cotutor.
+
+
+- @ExtraSection
+    [@AlterTitle { }]
+    @Title { }
+  { }
+
+Útil para generar dedicatorias, reconocimientos, agradecimientos, entre otros.
+Recibe como parámetros el título de la sección y opcionalmente un título
+alternativo usado en el índice de contenidos.
+
+
+- @Facade
+    [@CotutorInfo { }]
+    @TutorInfo
+  { }
+
+Genera el frontispicio. Recibe como parámetros la información del tutor y
+opcionalmente la información de cotutor.
+
+
+- @IndexOfContents
+
+Genera el índice de contenidos.
+
+
+- @IndexOfGraphics
+
+Genera el índice de gráficos.
+
+
+- @IndexOfTables
+
+Genera el índice de tablas.
+
+
+- @Introducción { }
+
+Genera la introducción.
+
+
+- @Sumary @KeyWords { } { }
+
+Genera el resumen del TEG. Recibe por parámetro las palabras claves.
+
+
+- @TEG
+    @MyAddress { }
+    @MyEmail { }
+    @MyFirstName { }
+    @MyIDNumber { }
+    @MyLastName { }
+    @MyPhoneNumber { }
+    @PaperTitle { }
+  { }
+
+Éste símbolo debe contener el cuerpo del Trabajo Especial de Grado. Recibe como
+parámetros la dirección, correo electrónico, nombres, cédula, apellidos y
+número de teléfono del autor; adicionalmente recibe el título del TEG.
