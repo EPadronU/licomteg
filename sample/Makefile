@@ -4,6 +4,7 @@ all:
 	make mydef
 	make compile
 	make compile
+	make compile
 	make pdf
 	make clean
 

@@ -1,7 +1,8 @@
+#vim: set wrap linebreak nolist
 @Include { "include/licomteg" }
 
 @Doc @Text @Begin
-@TEG 
+@TEG
     @MyFirstName { Gerardo José }
     @MyLastName { Curiel Orosco }
     @MyIDNumber { 17.684.547 }
@@ -9,8 +10,8 @@
     @MyPhoneNumber { 58-261-7573725 }
     @MyAddress { Urb. La Paz }
     @PaperTitle {
-Arquitectura para la Edición de Mensajes de Texto en Dispositivos Móviles
-Utilizando Reconocimiento Automático de Voz
+        Arquitectura para la Edición de Mensajes de Texto en Dispositivos
+        Móviles Utilizando Reconocimiento Automático de Voz
     }
 @Begin
 
@@ -94,10 +95,10 @@ Finalmente, se plantean las conclusiones y recomendaciones obtenidas al culminar
 
 @Chapter
     @Title { El Problema }
-    @Num { 1 }
+    @Num { I }
 @Begin
 @BeginSections
-@Section 
+@Section
     @Title { Planteamiento del Problema }
     @Tag { planteamiento }
 @Begin
@@ -194,7 +195,7 @@ La investigación se llevó a cabo en la Unidad de Lenguajes y Modelos Computaci
 
 @Chapter
     @Title { Marco Teórico }
-    @Num { 2 }
+    @Num { II }
 @Begin
 @BeginSections
 @Section
@@ -205,8 +206,8 @@ La investigación se llevó a cabo en la Unidad de Lenguajes y Modelos Computaci
 
 @PP
 En la actualidad el campo de investigación en torno al tema de los sistemas de reconocimiento automático de voz a nivel internacional tiene más de dos década de historia. Pero la aplicación de estas tecnologías en dispositivos móviles es de reciente data. Entre estas, se pueden mencionar los siguientes:
-//2.4f
-@BulletList
+
+//2.4f @BulletList
 @ListItem { Google Voice Search }
 @ListInterruptItem {
 "    "El producto Search by voice (2) (en español: ``búsqueda por voz'') es la tecnología desarrollada por Google para realizar búsquedas web en PC y teléfonos móviles. La premisa de Voice Search es habilitar al dispositivo usado para buscar datos basados en una entrada de búsqueda en forma de una emisión de voz, que describe el parámetro de búsqueda.
@@ -217,8 +218,7 @@ El esquema de trabajo de este producto es basado en un servicio web, expuesto si
 @PP
 Dado la naturaleza privativa de la solución, no se dispone de mayor información sobre la arquitectura de reconocimiento que usa Google Voice Search.
 
-//1.2f
-@Figure
+//1.2f @Figure
     @Caption { Google Voice. Fuente: Google Inc. (2012) } 
     @Location { Raw }
     @Tag { gvoice }
@@ -238,8 +238,7 @@ Siri utiliza conocimiento resultado de más de 40 años de investigación fundad
 Actualmente no tiene soporte para español; solo dispone de inglés, alemán, francés y 
 japonés como idiomas de reconocimiento (3).
 
-//1.2f
-@Figure
+//1.2f @Figure
     @Caption  { Siri. Fuente: Apple Inc. (2012) }
     @Location { Raw }
     @Tag { siri }
