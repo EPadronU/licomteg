@@ -9,10 +9,7 @@
     @MyEmail { gcuriel@gmail.com }
     @MyPhoneNumber { 58-261-7573725 }
     @MyAddress { Urb. La Paz }
-    @PaperTitle {
-        Arquitectura para la Edición de Mensajes de Texto en Dispositivos
-        Móviles Utilizando Reconocimiento Automático de Voz
-    }
+    @PaperTitle { Arquitectura para la Edición de Mensajes de Texto en Dispositivos Móviles Utilizando Reconocimiento Automático de Voz }
 @Begin
 
 @Cover
@@ -233,9 +230,7 @@ Dado la naturaleza privativa de la solución, no se dispone de mayor informació
 @ListInterruptItem {
 "    "Siri es una aplicación asistente personal para el sistema operativo móvil de Apple, iOS. La aplicación utiliza reconocimiento de voz y posterior procesamiento de lenguaje natural para responder preguntas, hacer recomendaciones y realizar acciones mediante la delegación de las solicitudes a un conjunto de servicios web que va en aumento. El esquema de trabajo de Siri está basado en un servicio web que, de igual manera que Google Voice Search, envía la emisión de voz a un servidor para su reconocimiento.
 @PP
-Siri utiliza conocimiento resultado de más de 40 años de investigación fundada por DARPA a través del Centro de Inteligencia Artificial de SRI International, una organización originada dentro de la Universidad de Stanford.
-@PP
-Actualmente no tiene soporte para español; solo dispone de inglés, alemán, francés y 
+Siri utiliza conocimiento resultado de más de 40 años de investigación fundada por DARPA a través del Centro de Inteligencia Artificial de SRI International, una organización originada dentro de la Universidad de Stanford. Actualmente no tiene soporte para español; solo dispone de inglés, alemán, francés y 
 japonés como idiomas de reconocimiento (3).
 
 //1.2f @Figure

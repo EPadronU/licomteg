@@ -385,9 +385,9 @@
   # @IndexBHeadingFont		{ Bold			} # index B head font
   # @IndexBHeadingBreak		{ ragged 1.2fx nohyphen	} # index B head break
   # @IndexBHeadingFormat	{ title			} # index B head fmt
-  # @SectionGap			{ 2.0v	@OrIfPlain 3f	} # between sections
-  # @SubSectionGap		{ 1.5v	@OrIfPlain 2f	} # between subsects
-  # @SubSubSectionGap		{ 1.5v	@OrIfPlain 2f	} # between sub-subs.
+  @SectionGap			{ 3.6f              } # between sections
+  @SubSectionGap		{ 2.4f              } # between subsects
+  @SubSubSectionGap		{ 2.4f              } # between sub-subs.
   # @AppendixGap		{ 2.0v	@OrIfPlain 3f	} # between appendices
   # @SubAppendixGap		{ 1.5v	@OrIfPlain 2f	} # between subappendices
   # @SubSubAppendixGap		{ 1.5v	@OrIfPlain 2f	} # between sub-subapps
