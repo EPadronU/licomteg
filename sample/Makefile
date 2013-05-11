@@ -1,20 +1,22 @@
+FILE_NAME=test
+
 all:
-	make pdf &> /dev/null
-	make pdf &> /dev/null
+	make mydef
+	make compile
+	make compile
 	make pdf
+	make clean
 
 clean:
 	rm -f lout.li
-	rm -f tmp*
+	rm -f ./-.ld
+	rm -f $(FILE_NAME).ps
+
+compile:
+	iconv -f UTF8 -t LATIN1 $(FILE_NAME).lout | lout > $(FILE_NAME).ps
 
 mydef:
 	iconv -f UTF8 -t LATIN1 include/mydef.utf8 > include/mydef
 
 pdf:
-	make mydef
-	iconv -f UTF8 -t LATIN1 test.lout > tmp.lout
-	lout tmp.lout > tmp.ps
-	ps2pdf tmp.ps test.pdf
-
-v:
-	evince test.pdf
+	ps2pdf $(FILE_NAME).ps $(FILE_NAME).pdf
