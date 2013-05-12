@@ -145,7 +145,7 @@ def @TEG
 
         //2.4f @MyCenter @B ABSTRACT
 
-        // 1.2fx @Break { @Body }
+        //1.0f 1.2fx @Break { @Body }
 
         //2.4f @B { KeyWords }: @KeyWords
 
@@ -213,7 +213,7 @@ def @TEG
 
         @MyCenter @B @Title
 
-        //1.2f 1.2fx @Break @Body
+        //1.0f ragged @Break { @Body }
     }
 
     def @Facade
@@ -300,7 +300,7 @@ def @TEG
 
         //2.4f @MyCenter @B RESUMEN
 
-        // 1.2fx @Break { @Body }
+        //1.0f 1.2fx @Break { @Body }
 
         //2.4f @B { Palabras claves }: @KeyWords
 
