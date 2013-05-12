@@ -117,7 +117,7 @@ def @AddToTIndex into { @TablePlace&&foll_or_prec }
 }
 
 # Símbolos visibles fuera de @TEG
-export @Abstract @Chapter @Cover @ExtraSection @Facade @IndexOfContents @IndexOfGraphics @IndexOfTables @Introduction @Sumary
+export @Abstract @Chapter @Cover @ExtraSection @Facade @IndexOfContents @IndexOfGraphics @IndexOfTables @Introduction @Summary
 
 # El núcleo de este archivo de configuración
 def @TEG
@@ -285,7 +285,7 @@ def @TEG
         //1f @Body
     }
 
-    def @Sumary
+    def @Summary
         named compulsory @KeyWords { }
         named @Tag { }
         right @Body
