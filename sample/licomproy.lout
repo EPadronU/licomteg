@@ -1,0 +1,89 @@
+#vim: set wrap linebreak nolist
+@Include { "include/licomteg" }
+
+@Doc @Text @Begin
+@TEG
+    @MyFirstName {}
+    @MyLastName {}
+    @MyIDNumber {}
+    @MyEmail {}
+    @MyPhoneNumber {}
+    @MyAddress {}
+    @PaperTitle {}
+@Begin
+
+@Cover
+    @Tutor {}
+    @Cotutor {}
+    @Month {}
+    @Year {}
+
+@NP
+
+@Facade
+    @TutorInfo {
+    }
+
+    @CotutorInfo {
+    }
+
+@NP
+
+@BeginSections
+@Section
+    @Title { Planteamiento del problema }
+@Begin
+
+@End @Section
+
+@Section
+    @Title { Justificación }
+@Begin
+
+@End @Section
+
+@Section
+    @Title { Marco teórico }
+@Begin
+
+@End @Section
+
+@Section
+    @Title { Objetivos }
+@Begin
+
+@End @Section
+
+@Section
+    @Title { Metodología }
+@Begin
+
+@End @Section
+
+@Section
+    @Title { Marco administrativo }
+@Begin
+
+@End @Section
+
+@Section
+    @Title { Viabilidad }
+@Begin
+
+@End @Section
+
+@Section
+    @Title { Resultados }
+@Begin
+
+@End @Section
+
+
+@Section
+    @Title { Cronograma de actividades }
+@Begin
+@End @Section
+@EndSections
+
+@End @TEG
+@End @Text
