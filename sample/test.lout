@@ -3,18 +3,18 @@
 
 @Doc @Text @Begin
 @TEG
-    @MyFirstName { Gerardo Jos√© }
+    @MyFirstName { Gerardo JosÈ }
     @MyLastName { Curiel Orosco }
     @MyIDNumber { 17.684.547 }
     @MyEmail { gcuriel@gmail.com }
     @MyPhoneNumber { 58-261-7573725 }
     @MyAddress { Urb. La Paz }
-    @PaperTitle { Arquitectura para la Edici√≥n de Mensajes de Texto en Dispositivos M√≥viles Utilizando Reconocimiento Autom√°tico de Voz }
+    @PaperTitle { Arquitectura para la EdiciÛn de Mensajes de Texto en Dispositivos MÛviles Utilizando Reconocimiento Autom·tico de Voz }
 @Begin
 
 @Cover
     @Tutor { MSc. Gerardo Pirela }
-    @Cotutor { MSc. Carlos Rinc√≥n }
+    @Cotutor { MSc. Carlos RincÛn }
     @Month { junio }
     @Year { 2012 }
 
@@ -24,22 +24,22 @@
     @TutorInfo {
         MSc. Gerardo Pirela @FF
         C.I. No.: 12.404.565 @FF
-        Correo electr√≥nico: gepirela@fec.luz.edu.ve
+        Correo electrÛnico: gepirela@fec.luz.edu.ve
     }
 
     @CotutorInfo {
-        MSc. Carlos Rinc√≥n @FF
+        MSc. Carlos RincÛn @FF
         C.I. No.: 12.590.157 @FF
-        Correo electr√≥nico: crincon@fec.luz.edu.ve
+        Correo electrÛnico: crincon@fec.luz.edu.ve
     }
 
 @NP
 
 @Summary
-    @KeyWords { Tecnolog√≠a Inal√°mbrica, M√≥vil, Reconocimiento de Voz, Interfaces, Arquitectura }
+    @KeyWords { TecnologÌa Inal·mbrica, MÛvil, Reconocimiento de Voz, Interfaces, Arquitectura }
 {
 @PP
-El objetivo de esta investigaci√≥n consisti√≥ en desarrollar una arquitectura para la edici√≥n de mensajes de texto utilizando reconocimiento autom√°tico de voz, que permita redactar correos y mensajes de texto de una manera mucho m√°s r√°pida y eficiente, adem√°s de permitir una interacci√≥n intuitiva y accesible para invidentes y personas que no han aprendido a usar esta tecnolog√≠a para comunicarse. La metodolog√≠a para la elaboraci√≥n del sistema es un modelo de desarrollo por fases siguiendo los lineamientos de los modelos de procesos incrementales. Principalmente, se revis√≥ la literatura sobre motores de reconocimiento autom√°tico de voz determinando que Pocketsphinx, herramienta para reconocimiento continuo de voz en tiempo real, result√≥ la mas adecuada a los requerimientos de la investigaci√≥n. Se dise√±√≥ y construy√≥ la arquitectura del lado del servidor que procesar√≠a las peticiones de reconocimiento de voz. Seguidamente, se desarroll√≥ una interfaz m√≥vil que se comunica con el componente servidor para enviar peticiones de reconocimiento de voz, caracterizada por ser intuitiva y extensible, capaz de asistir en el proceso de redacci√≥n de mensajes de texto usando reconocimiento de voz.
+El objetivo de esta investigaciÛn consistiÛ en desarrollar una arquitectura para la ediciÛn de mensajes de texto utilizando reconocimiento autom·tico de voz, que permita redactar correos y mensajes de texto de una manera mucho m·s r·pida y eficiente, adem·s de permitir una interacciÛn intuitiva y accesible para invidentes y personas que no han aprendido a usar esta tecnologÌa para comunicarse. La metodologÌa para la elaboraciÛn del sistema es un modelo de desarrollo por fases siguiendo los lineamientos de los modelos de procesos incrementales. Principalmente, se revisÛ la literatura sobre motores de reconocimiento autom·tico de voz determinando que Pocketsphinx, herramienta para reconocimiento continuo de voz en tiempo real, resultÛ la mas adecuada a los requerimientos de la investigaciÛn. Se diseÒÛ y construyÛ la arquitectura del lado del servidor que procesarÌa las peticiones de reconocimiento de voz. Seguidamente, se desarrollÛ una interfaz mÛvil que se comunica con el componente servidor para enviar peticiones de reconocimiento de voz, caracterizada por ser intuitiva y extensible, capaz de asistir en el proceso de redacciÛn de mensajes de texto usando reconocimiento de voz.
 }
 
 @NP
@@ -63,29 +63,29 @@ The objective of this research is to develop a prototype interface for SMS editi
 
 @Introduction {
 @PP
-El mundo de las telecomunicaciones ha ofrecido desde sus comienzos una serie de beneficios tecnol√≥gicos que se han aprovechado correctamente; sin embargo, con el transcurso del tiempo han surgido nuevas necesidades y nuevos requerimientos, entre ellos la movilidad y flexibilidad en las comunicaciones.
+El mundo de las telecomunicaciones ha ofrecido desde sus comienzos una serie de beneficios tecnolÛgicos que se han aprovechado correctamente; sin embargo, con el transcurso del tiempo han surgido nuevas necesidades y nuevos requerimientos, entre ellos la movilidad y flexibilidad en las comunicaciones.
 @PP
-Actualmente los mercados y las tecnolog√≠as se encuentran en un cambio constante, las comunicaciones m√≥viles han sido clave en esta revoluci√≥n comercial y estrat√©gica, trayendo movilidad a las comunicaci√≥n en dos v√≠as.
+Actualmente los mercados y las tecnologÌas se encuentran en un cambio constante, las comunicaciones mÛviles han sido clave en esta revoluciÛn comercial y estratÈgica, trayendo movilidad a las comunicaciÛn en dos vÌas.
 @PP
-Uno de los m√©todos de comunicaci√≥n que presentan los dispositivos m√≥viles, complementaria a la comunicaci√≥n v√≠a voz, son los mensajes de texto. Sin embargo, la interacci√≥n con el tel√©fono para utilizar este m√©todo es ineficiente y lenta. Las empresas fabricantes de tel√©fonos tampoco han desarrollado mejoras o alternativas de interacci√≥n para la composici√≥n de mensajes de texto.
+Uno de los mÈtodos de comunicaciÛn que presentan los dispositivos mÛviles, complementaria a la comunicaciÛn vÌa voz, son los mensajes de texto. Sin embargo, la interacciÛn con el telÈfono para utilizar este mÈtodo es ineficiente y lenta. Las empresas fabricantes de telÈfonos tampoco han desarrollado mejoras o alternativas de interacciÛn para la composiciÛn de mensajes de texto.
 @PP
-Afortunadamente, la ling√º√≠stica computacional ha generado desarrollo cient√≠fico te√≥rico y aplicado que pretende incorporar habilidades ling√º√≠sticas a las computadoras, permitiendo la comunicaci√≥n entre maquinas y personas a trav√©s de medios mas naturales, por ejemplo mediante una comunicaci√≥n oral. Particularmente, los reconocedores de voz permiten a un computador transformar autom√°ticamente una entrada de voz en su correspondiente forma textual, efectivamente posibilitando el desarrollo de un m√©todo alternativo de entrada de informaci√≥n a un dispositivo m√≥vil, mas natural y lo mas parecida posible a como lo har√≠a un ser humano.
+Afortunadamente, la ling¸Ìstica computacional ha generado desarrollo cientÌfico teÛrico y aplicado que pretende incorporar habilidades ling¸Ìsticas a las computadoras, permitiendo la comunicaciÛn entre maquinas y personas a travÈs de medios mas naturales, por ejemplo mediante una comunicaciÛn oral. Particularmente, los reconocedores de voz permiten a un computador transformar autom·ticamente una entrada de voz en su correspondiente forma textual, efectivamente posibilitando el desarrollo de un mÈtodo alternativo de entrada de informaciÛn a un dispositivo mÛvil, mas natural y lo mas parecida posible a como lo harÌa un ser humano.
 @PP
-Esta investigaci√≥n se encuentra estructurada en siete cap√≠tulos, conformados cada uno de ellos de la siguiente manera:
+Esta investigaciÛn se encuentra estructurada en siete capÌtulos, conformados cada uno de ellos de la siguiente manera:
 @PP
-El Cap√≠tulo I identifica el problema objeto de estudio mediante su debido planteamiento y se√±ala los objetivos, justificaci√≥n y alcance establecidos en esta investigaci√≥n.
+El CapÌtulo I identifica el problema objeto de estudio mediante su debido planteamiento y seÒala los objetivos, justificaciÛn y alcance establecidos en esta investigaciÛn.
 @PP
-El Cap√≠tulo II est√° conformado por los antecedentes y los fundamentos te√≥ricos sobre los cuales se asent√≥ la investigaci√≥n, ofreciendo de esta manera una mejor comprensi√≥n del tema abordado.
+El CapÌtulo II est· conformado por los antecedentes y los fundamentos teÛricos sobre los cuales se asentÛ la investigaciÛn, ofreciendo de esta manera una mejor comprensiÛn del tema abordado.
 @PP
-El Cap√≠tulo III describe la metodolog√≠a empleada para el desarrollo de la investigaci√≥n, as√≠ como los pasos para dar respuesta a los objetivos planteados.
+El CapÌtulo III describe la metodologÌa empleada para el desarrollo de la investigaciÛn, asÌ como los pasos para dar respuesta a los objetivos planteados.
 @PP
-En el Cap√≠tulo IV se definen las herramientas empleadas para la ejecuci√≥n del sistema objeto de la investigaci√≥n, as√≠ como los criterios de selecci√≥n respectivos y los m√©todos empleados m√°s sobresalientes.
+En el CapÌtulo IV se definen las herramientas empleadas para la ejecuciÛn del sistema objeto de la investigaciÛn, asÌ como los criterios de selecciÛn respectivos y los mÈtodos empleados m·s sobresalientes.
 @PP
-El Cap√≠tulo V muestra la arquitectura del lado del servidor, los detalles de implementaci√≥n y la integraci√≥n con el motor de reconocimiento de voz. El Cap√≠tulo VI muestra la interfaz de usuario del sistema, gr√°fica y funcionalmente seg√∫n su interacci√≥n con el usuario.
+El CapÌtulo V muestra la arquitectura del lado del servidor, los detalles de implementaciÛn y la integraciÛn con el motor de reconocimiento de voz. El CapÌtulo VI muestra la interfaz de usuario del sistema, gr·fica y funcionalmente seg˙n su interacciÛn con el usuario.
 @PP
-El Cap√≠tulo VII muestra el an√°lisis de los resultados de la investigaci√≥n mediante las pruebas efectuadas a las herramientas y a la arquitectura en general.
+El CapÌtulo VII muestra el an·lisis de los resultados de la investigaciÛn mediante las pruebas efectuadas a las herramientas y a la arquitectura en general.
 @PP
-Finalmente, se plantean las conclusiones y recomendaciones obtenidas al culminar esta investigaci√≥n, brindando la informaci√≥n y aportes necesarios a considerarse en investigaciones similares efectuadas a futuro.
+Finalmente, se plantean las conclusiones y recomendaciones obtenidas al culminar esta investigaciÛn, brindando la informaciÛn y aportes necesarios a considerarse en investigaciones similares efectuadas a futuro.
 }
 
 @NP
@@ -102,15 +102,15 @@ Finalmente, se plantean las conclusiones y recomendaciones obtenidas al culminar
 @AddToIndex @Title { Planteamiento del Problema } @Tag { planteamiento }
 
 @PP
-El uso de dispositivos m√≥viles revolucion√≥ la manera en que la humanidad se comunica, haciendo posible el realizar y recibir llamadas en cualquier lado, conectando y acercando a las personas cada vez m√°s. Para muchos, en un principio, las llamadas por dispositivos m√≥viles estaban fuera de su alcance, por el alto costo de esta nueva tecnolog√≠a, en comparaci√≥n con las tarifas que llevaban las compa√±√≠as de telefon√≠a fija. Es por esto que con la invenci√≥n del env√≠o de mensajes de texto, un formato reducido de comunicaci√≥n, una creciente poblaci√≥n adquiri√≥ tel√©fonos m√≥viles para tener todos los beneficios de la movilidad de los celulares pero con bajo costo.
+El uso de dispositivos mÛviles revolucionÛ la manera en que la humanidad se comunica, haciendo posible el realizar y recibir llamadas en cualquier lado, conectando y acercando a las personas cada vez m·s. Para muchos, en un principio, las llamadas por dispositivos mÛviles estaban fuera de su alcance, por el alto costo de esta nueva tecnologÌa, en comparaciÛn con las tarifas que llevaban las compaÒÌas de telefonÌa fija. Es por esto que con la invenciÛn del envÌo de mensajes de texto, un formato reducido de comunicaciÛn, una creciente poblaciÛn adquiriÛ telÈfonos mÛviles para tener todos los beneficios de la movilidad de los celulares pero con bajo costo.
 @PP
-Sin embargo, la interacci√≥n necesaria para el env√≠o de un mensaje de texto es ineficiente. La redacci√≥n en los teclados peque√±os de los tel√©fonos actuales es inherentemente lenta e inconveniente, adem√°s, es una tarea que requiere de toda la atenci√≥n del usuario; por ejemplo, crear un mensaje mientras se conduce un autom√≥vil se convierte en una tarea extremadamente peligrosa, ya que el conductor podr√≠a no prestar toda la atenci√≥n a la v√≠a mientras redacta el mismo (1).
+Sin embargo, la interacciÛn necesaria para el envÌo de un mensaje de texto es ineficiente. La redacciÛn en los teclados pequeÒos de los telÈfonos actuales es inherentemente lenta e inconveniente, adem·s, es una tarea que requiere de toda la atenciÛn del usuario; por ejemplo, crear un mensaje mientras se conduce un automÛvil se convierte en una tarea extremadamente peligrosa, ya que el conductor podrÌa no prestar toda la atenciÛn a la vÌa mientras redacta el mismo (1).
 @PP
-Las empresas productoras de tel√©fonos m√≥viles y software, a√∫n cuando han desarrollado innovaciones en el √°rea de interfaz de usuario de estos dispositivos como el marcado r√°pido y discado de voz, se han quedado atr√°s en el tan popular env√≠o de mensajes de texto, haciendo que la manera de relacionar al usuario con el dispositivo no haya mejorado desde que el mismo sali√≥ el mercado.
+Las empresas productoras de telÈfonos mÛviles y software, a˙n cuando han desarrollado innovaciones en el ·rea de interfaz de usuario de estos dispositivos como el marcado r·pido y discado de voz, se han quedado atr·s en el tan popular envÌo de mensajes de texto, haciendo que la manera de relacionar al usuario con el dispositivo no haya mejorado desde que el mismo saliÛ el mercado.
 @PP
-Con la realizaci√≥n de este trabajo se busc√≥ el desarrollo de una interfaz y arquitectura alternativa de redacci√≥n de mensajes de texto, utilizando reconocimiento de voz, que reduzca al m√≠nimo o incluso elimine la interacci√≥n necesaria del usuario para la redacci√≥n y env√≠o de mensajes de texto utilizando dispositivos m√≥viles.
+Con la realizaciÛn de este trabajo se buscÛ el desarrollo de una interfaz y arquitectura alternativa de redacciÛn de mensajes de texto, utilizando reconocimiento de voz, que reduzca al mÌnimo o incluso elimine la interacciÛn necesaria del usuario para la redacciÛn y envÌo de mensajes de texto utilizando dispositivos mÛviles.
 @PP
-Se requiri√≥ que la arquitectura fuese robusta y el servicio expuesto fuese f√°cil de consumir por dispositivos m√≥viles, los cuales actualmente no tienen la capacidad de procesamiento necesaria para llevar a cabo el proceso de reconocimiento de voz por si solos.
+Se requiriÛ que la arquitectura fuese robusta y el servicio expuesto fuese f·cil de consumir por dispositivos mÛviles, los cuales actualmente no tienen la capacidad de procesamiento necesaria para llevar a cabo el proceso de reconocimiento de voz por si solos.
 @End @Section
 
 @Section
@@ -120,7 +120,7 @@ Se requiri√≥ que la arquitectura fuese robusta y el servicio expuesto fuese f√°c
 @AddToIndex @Title { Alcance del Problema } @Tag { alcance }
 
 @PP
-En investigaci√≥n estuvo delimitada a la creaci√≥n de una arquitectura para la redacci√≥n de mensajes de texto usando reconocimiento autom√°tico de voz y un componente m√≥vil, el cual consume el servicio de reconocimiento de voz ofrecido por esta arquitectura.
+En investigaciÛn estuvo delimitada a la creaciÛn de una arquitectura para la redacciÛn de mensajes de texto usando reconocimiento autom·tico de voz y un componente mÛvil, el cual consume el servicio de reconocimiento de voz ofrecido por esta arquitectura.
 @End @Section
 
 @Section
@@ -137,53 +137,53 @@ En investigaci√≥n estuvo delimitada a la creaci√≥n de una arquitectura para la r
 @AddToIndex @Title { Objetivo General } @Tag { obj.general }
 
 @PP
-Construir una arquitectura para la edici√≥n de mensajes de texto en dispositivos M√≥viles utilizando reconocimiento autom√°tico de voz.
+Construir una arquitectura para la ediciÛn de mensajes de texto en dispositivos MÛviles utilizando reconocimiento autom·tico de voz.
 @End @SubSection
 
 @SubSection
-    @Title { Objetivos Espec√≠ficos }
+    @Title { Objetivos EspecÌficos }
     @Tag { obj.especificos }
 @Begin
-@AddToIndex @Title { Objetivos Espec√≠ficos } @Tag { obj.especificos }
+@AddToIndex @Title { Objetivos EspecÌficos } @Tag { obj.especificos }
 
 @PP
 @BulletList 
-@ListItem { Revisar literatura acerca del tema y aplicaciones existentes para el reconocimiento de voz e interacci√≥n con tales sistemas. }
-@ListItem { Realizar un an√°lisis comparativo de los motores de reconocimiento autom√°tico de voz aplicables. }
-@ListItem { Seleccionar la herramienta de reconocimiento autom√°tico de voz. }
-@ListItem { Dise√±ar la arquitectura del sistema. }
-@ListItem { Dise√±ar la interfaz gr√°fica del sistema. }
-@ListItem { Implementar el protocolo de comunicaci√≥n entre la interfaz gr√°fica y el reconocedor autom√°tico de voz. }
-@ListItem { Probar la funcionalidad de la aplicaci√≥n. }
+@ListItem { Revisar literatura acerca del tema y aplicaciones existentes para el reconocimiento de voz e interacciÛn con tales sistemas. }
+@ListItem { Realizar un an·lisis comparativo de los motores de reconocimiento autom·tico de voz aplicables. }
+@ListItem { Seleccionar la herramienta de reconocimiento autom·tico de voz. }
+@ListItem { DiseÒar la arquitectura del sistema. }
+@ListItem { DiseÒar la interfaz gr·fica del sistema. }
+@ListItem { Implementar el protocolo de comunicaciÛn entre la interfaz gr·fica y el reconocedor autom·tico de voz. }
+@ListItem { Probar la funcionalidad de la aplicaciÛn. }
 @EndList
 @End @SubSection
 @EndSubSections
 @End @Section
 
 @Section
-    @Title { Justificaci√≥n de la Investigaci√≥n }
+    @Title { JustificaciÛn de la InvestigaciÛn }
     @Tag { justificacion }
 @Begin
-@AddToIndex @Title { Justificaci√≥n de la Investigaci√≥n } @Tag { justificacion }
+@AddToIndex @Title { JustificaciÛn de la InvestigaciÛn } @Tag { justificacion }
 
 @PP
-El inter√©s original que motiv√≥ esta investigaci√≥n es el de darle capacidades de reconocimiento de voz a sistemas de ling√º√≠stica computacional desarrollados en los centros de investigaci√≥n de La Universidad del Zulia. Estos esfuerzos de investigaci√≥n requieren de un sistema de procesamiento de emisiones de voz con la capacidad de integraci√≥n con m√∫ltiples tipos de interfaces de usuario, como por ejemplo un dispositivo m√≥vil e incluso otros sistemas ling√º√≠sticos.
+El interÈs original que motivÛ esta investigaciÛn es el de darle capacidades de reconocimiento de voz a sistemas de ling¸Ìstica computacional desarrollados en los centros de investigaciÛn de La Universidad del Zulia. Estos esfuerzos de investigaciÛn requieren de un sistema de procesamiento de emisiones de voz con la capacidad de integraciÛn con m˙ltiples tipos de interfaces de usuario, como por ejemplo un dispositivo mÛvil e incluso otros sistemas ling¸Ìsticos.
 @PP
-La capacidad de respuesta textual basada en una entrada de habla proporcionar√≠a otra forma de comunicaci√≥n entre el dispositivo de c√≥mputo y el hombre que podr√≠a ser √∫til incluso para personas con necesidades especiales (invidentes) y para facilitar en general el uso de tecnolog√≠a, sustituyendo las interfaces gr√°ficas basadas en dispositivos f√≠sicos de entrada por interfaces naturales basadas en voz.
+La capacidad de respuesta textual basada en una entrada de habla proporcionarÌa otra forma de comunicaciÛn entre el dispositivo de cÛmputo y el hombre que podrÌa ser ˙til incluso para personas con necesidades especiales (invidentes) y para facilitar en general el uso de tecnologÌa, sustituyendo las interfaces gr·ficas basadas en dispositivos fÌsicos de entrada por interfaces naturales basadas en voz.
 @PP
-Entre los beneficios que ofrecen sistemas de este tipo est√°n la creaci√≥n de sistemas de redacci√≥n de texto, sistemas del tipo ``asistente personal'', sistemas tipo kioscos de informaci√≥n interactivos, interfaces de usuario para personas invidentes, entre otros.
+Entre los beneficios que ofrecen sistemas de este tipo est·n la creaciÛn de sistemas de redacciÛn de texto, sistemas del tipo ``asistente personal'', sistemas tipo kioscos de informaciÛn interactivos, interfaces de usuario para personas invidentes, entre otros.
 @PP
-La integraci√≥n de reconocimiento de voz en sistemas de ling√º√≠stica computacional permite aumentar la interactividad con el usuario y mejorar la accesibilidad, consiguiendo que el contenido e incluso las √≥rdenes sean reconocidas, lo que posibilita la construcci√≥n de sistemas con los que los usuarios pueden interactuar de manera natural.
+La integraciÛn de reconocimiento de voz en sistemas de ling¸Ìstica computacional permite aumentar la interactividad con el usuario y mejorar la accesibilidad, consiguiendo que el contenido e incluso las Ûrdenes sean reconocidas, lo que posibilita la construcciÛn de sistemas con los que los usuarios pueden interactuar de manera natural.
 @End @Section
 
 @Section
-    @Title { Delimitaci√≥n de la investigaci√≥n. }
+    @Title { DelimitaciÛn de la investigaciÛn. }
     @Tag { delimitacion }
 @Begin
-@AddToIndex @Title { Delimitaci√≥n de la investigaci√≥n. } @Tag { delimitacion }
+@AddToIndex @Title { DelimitaciÛn de la investigaciÛn. } @Tag { delimitacion }
 
 @PP
-La investigaci√≥n se llev√≥ a cabo en la Unidad de Lenguajes y Modelos Computacionales de la Facultad Experimental de Ciencias de la Universidad del Zulia y su duraci√≥n fue de 16 meses. Se inici√≥ en el mes de noviembre de 2011 y culmin√≥ en marzo de 2012. La l√≠nea de investigaci√≥n a la cual estuvo anexa fue: Ling√º√≠stica Computacional.
+La investigaciÛn se llevÛ a cabo en la Unidad de Lenguajes y Modelos Computacionales de la Facultad Experimental de Ciencias de la Universidad del Zulia y su duraciÛn fue de 16 meses. Se iniciÛ en el mes de noviembre de 2011 y culminÛ en marzo de 2012. La lÌnea de investigaciÛn a la cual estuvo anexa fue: Ling¸Ìstica Computacional.
 @End @Section
 @EndSections
 @End @Chapter
@@ -191,29 +191,29 @@ La investigaci√≥n se llev√≥ a cabo en la Unidad de Lenguajes y Modelos Computaci
 @NP
 
 @Chapter
-    @Title { Marco Te√≥rico }
+    @Title { Marco TeÛrico }
     @Num { II }
 @Begin
 @BeginSections
 @Section
-    @Title { Antecedentes de la Investigaci√≥n }
+    @Title { Antecedentes de la InvestigaciÛn }
     @Tag { antecedentes }
 @Begin
-@AddToIndex @Title { Antecedentes de la Investigaci√≥n } @Tag { antecedentes }
+@AddToIndex @Title { Antecedentes de la InvestigaciÛn } @Tag { antecedentes }
 
 @PP
-En la actualidad el campo de investigaci√≥n en torno al tema de los sistemas de reconocimiento autom√°tico de voz a nivel internacional tiene m√°s de dos d√©cada de historia. Pero la aplicaci√≥n de estas tecnolog√≠as en dispositivos m√≥viles es de reciente data. Entre estas, se pueden mencionar los siguientes:
+En la actualidad el campo de investigaciÛn en torno al tema de los sistemas de reconocimiento autom·tico de voz a nivel internacional tiene m·s de dos dÈcada de historia. Pero la aplicaciÛn de estas tecnologÌas en dispositivos mÛviles es de reciente data. Entre estas, se pueden mencionar los siguientes:
 
 //2.4f @BulletList
 @ListItem { Google Voice Search }
 @ListInterruptItem {
-"    "El producto Search by voice (2) (en espa√±ol: ``b√∫squeda por voz'') es la tecnolog√≠a desarrollada por Google para realizar b√∫squedas web en PC y tel√©fonos m√≥viles. La premisa de Voice Search es habilitar al dispositivo usado para buscar datos basados en una entrada de b√∫squeda en forma de una emisi√≥n de voz, que describe el par√°metro de b√∫squeda.
+"    "El producto Search by voice (2) (en espaÒol: ``b˙squeda por voz'') es la tecnologÌa desarrollada por Google para realizar b˙squedas web en PC y telÈfonos mÛviles. La premisa de Voice Search es habilitar al dispositivo usado para buscar datos basados en una entrada de b˙squeda en forma de una emisiÛn de voz, que describe el par·metro de b˙squeda.
 @PP
-El servicio est√° disponible en dispositivos m√≥viles a trav√©s de una aplicaci√≥n nativa, disponible para el sistema operativo iOS y para Android. En el caso de las PC, est√° disponible a trav√©s de su navegador web Google Chrome, como un elemento html de entrada con la caracter√≠stica habilitada, usando la clase x-webkit-speech. Actualmente, no tiene soporte para espa√±ol.
+El servicio est· disponible en dispositivos mÛviles a travÈs de una aplicaciÛn nativa, disponible para el sistema operativo iOS y para Android. En el caso de las PC, est· disponible a travÈs de su navegador web Google Chrome, como un elemento html de entrada con la caracterÌstica habilitada, usando la clase x-webkit-speech. Actualmente, no tiene soporte para espaÒol.
 @PP
-El esquema de trabajo de este producto es basado en un servicio web, expuesto siguiendo la metodolog√≠a REST para exposici√≥n de recursos en internet, que recibe la voz proveniente de los dispositivos capaces de enviar audio y retorna en texto la hip√≥tesis de reconocimiento. El corpus de optimizado para interpretar frases o t√©rminos usualmente usados en el contexto de b√∫squedas de internet.
+El esquema de trabajo de este producto es basado en un servicio web, expuesto siguiendo la metodologÌa REST para exposiciÛn de recursos en internet, que recibe la voz proveniente de los dispositivos capaces de enviar audio y retorna en texto la hipÛtesis de reconocimiento. El corpus de optimizado para interpretar frases o tÈrminos usualmente usados en el contexto de b˙squedas de internet.
 @PP
-Dado la naturaleza privativa de la soluci√≥n, no se dispone de mayor informaci√≥n sobre la arquitectura de reconocimiento que usa Google Voice Search.
+Dado la naturaleza privativa de la soluciÛn, no se dispone de mayor informaciÛn sobre la arquitectura de reconocimiento que usa Google Voice Search.
 
 //1.2f @Figure
     @Caption { Google Voice. Fuente: Google Inc. (2012) } 
@@ -228,10 +228,10 @@ Dado la naturaleza privativa de la soluci√≥n, no se dispone de mayor informaci√≥
 
 @ListItem { Siri  }
 @ListInterruptItem {
-"    "Siri es una aplicaci√≥n asistente personal para el sistema operativo m√≥vil de Apple, iOS. La aplicaci√≥n utiliza reconocimiento de voz y posterior procesamiento de lenguaje natural para responder preguntas, hacer recomendaciones y realizar acciones mediante la delegaci√≥n de las solicitudes a un conjunto de servicios web que va en aumento. El esquema de trabajo de Siri est√° basado en un servicio web que, de igual manera que Google Voice Search, env√≠a la emisi√≥n de voz a un servidor para su reconocimiento.
+"    "Siri es una aplicaciÛn asistente personal para el sistema operativo mÛvil de Apple, iOS. La aplicaciÛn utiliza reconocimiento de voz y posterior procesamiento de lenguaje natural para responder preguntas, hacer recomendaciones y realizar acciones mediante la delegaciÛn de las solicitudes a un conjunto de servicios web que va en aumento. El esquema de trabajo de Siri est· basado en un servicio web que, de igual manera que Google Voice Search, envÌa la emisiÛn de voz a un servidor para su reconocimiento.
 @PP
-Siri utiliza conocimiento resultado de m√°s de 40 a√±os de investigaci√≥n fundada por DARPA a trav√©s del Centro de Inteligencia Artificial de SRI International, una organizaci√≥n originada dentro de la Universidad de Stanford. Actualmente no tiene soporte para espa√±ol; solo dispone de ingl√©s, alem√°n, franc√©s y 
-japon√©s como idiomas de reconocimiento (3).
+Siri utiliza conocimiento resultado de m·s de 40 aÒos de investigaciÛn fundada por DARPA a travÈs del Centro de Inteligencia Artificial de SRI International, una organizaciÛn originada dentro de la Universidad de Stanford. Actualmente no tiene soporte para espaÒol; solo dispone de inglÈs, alem·n, francÈs y 
+japonÈs como idiomas de reconocimiento (3).
 
 //1.2f @Figure
     @Caption  { Siri. Fuente: Apple Inc. (2012) }
@@ -246,10 +246,10 @@ japon√©s como idiomas de reconocimiento (3).
 @End @Section
 
 @Section
-    @Title { Bases Te√≥ricas }
+    @Title { Bases TeÛricas }
     @Tag { bases.teoricas }
 @Begin
-@AddToIndex @Title { Bases Te√≥ricas } @Tag { bases.teoricas }
+@AddToIndex @Title { Bases TeÛricas } @Tag { bases.teoricas }
 
 @BeginSubSections
 @SubSection
@@ -259,27 +259,27 @@ japon√©s como idiomas de reconocimiento (3).
 @AddToIndex @Title { Reconocedor de Voz } @Tag { reconocedor.voz }
 
 @PP
-Son sistemas con tecnolog√≠a que puede traducir palabras habladas en texto. Algunos sistemas de reconocimiento de voz usan ''entrenamiento`` donde una persona lee secciones de texto dentro del sistema. Estos sistemas analizan las caracter√≠sticas espec√≠ficas de la voz de la persona y la utilizan para afinar el reconocimiento, resultando en transcripci√≥n m√°s exacta. Existen dos tipos de reconocedores de voz: Son llamados ''independientes del hablante`` los sistemas que pueden reconocer una variedad de hablantes, sin ning√∫n entrenamiento. Este tipo de software generalmente limita el n√∫mero de palabras en un vocabulario, pero es la √∫nica opci√≥n real√≠stica para ciertas aplicaciones que deban aceptar entrada de voz proveniente de un n√∫mero grande de usuarios. Por otro lado los sistemas que usan entrenamiento son llamados ''dependientes del hablante``, los cuales solo son capaces de reconocer la voz de los usuarios con los cuales fue entrenado (4).
+Son sistemas con tecnologÌa que puede traducir palabras habladas en texto. Algunos sistemas de reconocimiento de voz usan ''entrenamiento`` donde una persona lee secciones de texto dentro del sistema. Estos sistemas analizan las caracterÌsticas especÌficas de la voz de la persona y la utilizan para afinar el reconocimiento, resultando en transcripciÛn m·s exacta. Existen dos tipos de reconocedores de voz: Son llamados ''independientes del hablante`` los sistemas que pueden reconocer una variedad de hablantes, sin ning˙n entrenamiento. Este tipo de software generalmente limita el n˙mero de palabras en un vocabulario, pero es la ˙nica opciÛn realÌstica para ciertas aplicaciones que deban aceptar entrada de voz proveniente de un n˙mero grande de usuarios. Por otro lado los sistemas que usan entrenamiento son llamados ''dependientes del hablante``, los cuales solo son capaces de reconocer la voz de los usuarios con los cuales fue entrenado (4).
 @End @SubSection
 
 @SubSection
-    @Title { Modelo Ac√∫stico }
+    @Title { Modelo Ac˙stico }
     @Tag { modelo.acustico }
 @Begin
-@AddToIndex @Title { Modelo Ac√∫stico } @Tag { modelo.acustico }
+@AddToIndex @Title { Modelo Ac˙stico } @Tag { modelo.acustico }
 
 @PP
-Un modelo ac√∫stico es un archivo que contiene representaciones estad√≠sticas de cada sonido distinto que compone una palabra; cada una de estas representaciones se le asigna una etiqueta llamada fonema. Este modelo es creado tomando grabaciones de audio del habla y transcripciones de texto asociados, y luego haciendo uso de software para generar las representaciones estad√≠sticas de los sonidos que crea cada palabra (5).
+Un modelo ac˙stico es un archivo que contiene representaciones estadÌsticas de cada sonido distinto que compone una palabra; cada una de estas representaciones se le asigna una etiqueta llamada fonema. Este modelo es creado tomando grabaciones de audio del habla y transcripciones de texto asociados, y luego haciendo uso de software para generar las representaciones estadÌsticas de los sonidos que crea cada palabra (5).
 @End @SubSection
 
 @SubSection
-    @Title { Diccionario Fon√©tico }
+    @Title { Diccionario FonÈtico }
     @Tag { diccionario.fonetico }
 @Begin
-@AddToIndex @Title { Diccionario Fon√©tico } @Tag { diccionario.fonetico }
+@AddToIndex @Title { Diccionario FonÈtico } @Tag { diccionario.fonetico }
 
 @PP
-Un diccionario fon√©tico es un vocabulario que permite localizar palabras por la forma en la que suenan. Estos diccionarios son √∫tiles cuando la ortograf√≠a de una palabra es desconocida. Este pareo no es siempre muy efectivo, pero es pr√°ctico la mayor√≠a de las veces (5).
+Un diccionario fonÈtico es un vocabulario que permite localizar palabras por la forma en la que suenan. Estos diccionarios son ˙tiles cuando la ortografÌa de una palabra es desconocida. Este pareo no es siempre muy efectivo, pero es pr·ctico la mayorÌa de las veces (5).
 @End @SubSection
 
 @SubSection
@@ -289,7 +289,7 @@ Un diccionario fon√©tico es un vocabulario que permite localizar palabras por la
 @AddToIndex @Title { Modelo del Lenguaje } @Tag { modelo.lenguaje }
 
 @PP
-Un modelo del lenguaje es un archivo que contiene una lista larga de palabras y su probabilidad de ocurrencia. Es usado en aplicaciones de dictado para restringir la b√∫squeda de palabras. Este define cu√°l palabra puede seguir qu√© palabras previamente reconocidas y ayuda a restringir significativamente el proceso de pareo mediante la eliminaci√≥n de palabras que no son probables. Los modelos de lenguaje m√°s com√∫nmente usados son modelos de n-grama, los cuales contienen estad√≠sticas de secuencias de palabras (5).
+Un modelo del lenguaje es un archivo que contiene una lista larga de palabras y su probabilidad de ocurrencia. Es usado en aplicaciones de dictado para restringir la b˙squeda de palabras. Este define cu·l palabra puede seguir quÈ palabras previamente reconocidas y ayuda a restringir significativamente el proceso de pareo mediante la eliminaciÛn de palabras que no son probables. Los modelos de lenguaje m·s com˙nmente usados son modelos de n-grama, los cuales contienen estadÌsticas de secuencias de palabras (5).
 @End @SubSection
 
 @SubSection
@@ -299,7 +299,7 @@ Un modelo del lenguaje es un archivo que contiene una lista larga de palabras y 
 @AddToIndex @Title { Corpus de Voz } @Tag { corpus.voz }
 
 @PP
-La idea de un corpus de voz nace del origen mismo de la comunicaci√≥n en los seres humanos. La creaci√≥n de registros hist√≥ricos del habla se remonta a los primeros experimentos de Tomas Edison, que fue quien abri√≥ a la humanidad las puertas de este complejo universo. Los avances tecnol√≥gicos del siglo XX progresivamente posibilitaron hacer grabaciones de mayor calidad; inicialmente los elementos magnetof√≥nicos protagonizaron la industria de los registros sonoros, sin embargo durante las √∫ltimas d√©cadas se han desarrollado t√©cnicas de digitalizaci√≥n que han incrementado notablemente la calidad de las grabaciones, y han posibilitado el uso del procesamiento digital de se√±ales; estas t√©cnicas derivaron (de entre muchos otros experimentos) en el desarrollo de tecnolog√≠as del habla, como por ejemplo reconocimiento de la voz (5).
+La idea de un corpus de voz nace del origen mismo de la comunicaciÛn en los seres humanos. La creaciÛn de registros histÛricos del habla se remonta a los primeros experimentos de Tomas Edison, que fue quien abriÛ a la humanidad las puertas de este complejo universo. Los avances tecnolÛgicos del siglo XX progresivamente posibilitaron hacer grabaciones de mayor calidad; inicialmente los elementos magnetofÛnicos protagonizaron la industria de los registros sonoros, sin embargo durante las ˙ltimas dÈcadas se han desarrollado tÈcnicas de digitalizaciÛn que han incrementado notablemente la calidad de las grabaciones, y han posibilitado el uso del procesamiento digital de seÒales; estas tÈcnicas derivaron (de entre muchos otros experimentos) en el desarrollo de tecnologÌas del habla, como por ejemplo reconocimiento de la voz (5).
 @End @SubSection
 
 @SubSection
@@ -309,17 +309,17 @@ La idea de un corpus de voz nace del origen mismo de la comunicaci√≥n en los ser
 @AddToIndex @Title { HTTP } @Tag { http }
 
 @PP
-Hypertext Transfer Protocol o HTTP (en espa√±ol: protocolo de transferencia de hipertexto) es el protocolo usado en cada transacci√≥n sobre la World Wide Web. Es un protocolo orientado a transacciones y sigue el esquema petici√≥n-respuesta entre un cliente y un servidor. Al cliente que efect√∫a la petici√≥n (un navegador web o un spider) se lo conoce como ''user agent`` (agente del usuario). A la informaci√≥n transmitida se la llama ''recurso`` y se la identifica mediante un localizador uniforme de recursos (por sus siglas en ingles: URL). Los recursos pueden ser archivos, el resultado de la ejecuci√≥n de un programa, una consulta a una base de datos, la traducci√≥n autom√°tica de un documento, etc (6).
+Hypertext Transfer Protocol o HTTP (en espaÒol: protocolo de transferencia de hipertexto) es el protocolo usado en cada transacciÛn sobre la World Wide Web. Es un protocolo orientado a transacciones y sigue el esquema peticiÛn-respuesta entre un cliente y un servidor. Al cliente que efect˙a la peticiÛn (un navegador web o un spider) se lo conoce como ''user agent`` (agente del usuario). A la informaciÛn transmitida se la llama ''recurso`` y se la identifica mediante un localizador uniforme de recursos (por sus siglas en ingles: URL). Los recursos pueden ser archivos, el resultado de la ejecuciÛn de un programa, una consulta a una base de datos, la traducciÛn autom·tica de un documento, etc (6).
 @End @SubSection
 
 @SubSection
-    @Title { C√≥dec }
+    @Title { CÛdec }
     @Tag { codec }
 @Begin
-@AddToIndex @Title { C√≥dec } @Tag { codec }
+@AddToIndex @Title { CÛdec } @Tag { codec }
 
 @PP
-C√≥dec es la abreviatura de codificador-decodificador. Describe una especificaci√≥n desarrollada en software, hardware o una combinaci√≥n de ambos, capaz de transformar un archivo con un flujo de datos (en ingles: stream) o una se√±al. Los c√≥decs pueden codificar el flujo o la se√±al (a menudo para la transmisi√≥n, el almacenaje o el cifrado) y recuperarlo o descifrarlo del mismo modo para la reproducci√≥n o la manipulaci√≥n en un formato m√°s apropiado para estas operaciones. Los c√≥decs son usados a menudo en videoconferencias y emisiones de medios de comunicaci√≥n (7).
+CÛdec es la abreviatura de codificador-decodificador. Describe una especificaciÛn desarrollada en software, hardware o una combinaciÛn de ambos, capaz de transformar un archivo con un flujo de datos (en ingles: stream) o una seÒal. Los cÛdecs pueden codificar el flujo o la seÒal (a menudo para la transmisiÛn, el almacenaje o el cifrado) y recuperarlo o descifrarlo del mismo modo para la reproducciÛn o la manipulaciÛn en un formato m·s apropiado para estas operaciones. Los cÛdecs son usados a menudo en videoconferencias y emisiones de medios de comunicaciÛn (7).
 @End @SubSection
 
 @SubSection
@@ -329,7 +329,7 @@ C√≥dec es la abreviatura de codificador-decodificador. Describe una especificaci
 @AddToIndex @Title { JSON } @Tag { json }
 
 @PP
-JSON, acr√≥nimo de JavaScript Object Notation, es un formato ligero para el intercambio de datos, basado en texto y dise√±ado como contenedor para intercambio de datos. Es derivado del lenguaje Javascript, donde es usado para representar estructuras de datos y arreglos asociativos.  La simplicidad de JSON ha dado lugar a la generalizaci√≥n de su uso. El formato JSON se emplea habitualmente en entornos donde el tama√±o del flujo de datos entre cliente y servidor es de vital importancia (8).
+JSON, acrÛnimo de JavaScript Object Notation, es un formato ligero para el intercambio de datos, basado en texto y diseÒado como contenedor para intercambio de datos. Es derivado del lenguaje Javascript, donde es usado para representar estructuras de datos y arreglos asociativos.  La simplicidad de JSON ha dado lugar a la generalizaciÛn de su uso. El formato JSON se emplea habitualmente en entornos donde el tamaÒo del flujo de datos entre cliente y servidor es de vital importancia (8).
 @End @SubSection
 
 @SubSection
@@ -339,7 +339,7 @@ JSON, acr√≥nimo de JavaScript Object Notation, es un formato ligero para el inte
 @AddToIndex @Title { JavaScript } @Tag { javascript }
 
 @PP
-JavaScript es un lenguaje de programaci√≥n interpretado, dialecto del est√°ndar ECMAScript. Se utiliza principalmente en su forma del lado del cliente, implementado como parte de un navegador web permitiendo mejoras en la interfaz de usuario y p√°ginas web din√°micas, en bases de datos locales al navegador (9).
+JavaScript es un lenguaje de programaciÛn interpretado, dialecto del est·ndar ECMAScript. Se utiliza principalmente en su forma del lado del cliente, implementado como parte de un navegador web permitiendo mejoras en la interfaz de usuario y p·ginas web din·micas, en bases de datos locales al navegador (9).
 @End @SubSection
 
 @SubSection
@@ -349,7 +349,7 @@ JavaScript es un lenguaje de programaci√≥n interpretado, dialecto del est√°ndar 
 @AddToIndex @Title { SMS } @Tag { sms }
 
 @PP
-El servicio de mensajes cortos o SMS (del ingl√©s: Short Message Service) es un servicio disponible en los tel√©fonos m√≥viles que permite el env√≠o de mensajes cortos (tambi√©n conocidos como mensajes de texto, o m√°s coloquialmente, textos) entre tel√©fonos m√≥viles, tel√©fonos fijos y otros dispositivos de mano (10).
+El servicio de mensajes cortos o SMS (del inglÈs: Short Message Service) es un servicio disponible en los telÈfonos mÛviles que permite el envÌo de mensajes cortos (tambiÈn conocidos como mensajes de texto, o m·s coloquialmente, textos) entre telÈfonos mÛviles, telÈfonos fijos y otros dispositivos de mano (10).
 @End @SubSection
 
 @SubSection
@@ -359,7 +359,7 @@ El servicio de mensajes cortos o SMS (del ingl√©s: Short Message Service) es un 
 @AddToIndex @Title { Smartphone } @Tag { smarthphone }
 
 @PP
-Un tel√©fono inteligente (del ingles: smartphone) es un tel√©fono m√≥vil construido sobre una plataforma de inform√°tica m√≥vil, m√°s la capacidad de computaci√≥n avanzada y conectividad de un tel√©fono m√≥vil, con la posibilidad de instalar aplicaciones para cualquier uso. El t√©rmino ¬´inteligente¬ª hace referencia a la capacidad de usarse como un computador de bolsillo, llegando incluso a remplazar a un computador personal en algunos casos (11).
+Un telÈfono inteligente (del ingles: smartphone) es un telÈfono mÛvil construido sobre una plataforma de inform·tica mÛvil, m·s la capacidad de computaciÛn avanzada y conectividad de un telÈfono mÛvil, con la posibilidad de instalar aplicaciones para cualquier uso. El tÈrmino ´inteligenteª hace referencia a la capacidad de usarse como un computador de bolsillo, llegando incluso a remplazar a un computador personal en algunos casos (11).
 @End @SubSection
 @EndSubSections
 @End @Section
