@@ -1,4 +1,4 @@
-#vim: set wrap linebreak nolist
+# vim: set wrap linebreak nolist
 @Include { "include/licomteg" }
 
 @Doc @Text @Begin
@@ -29,59 +29,123 @@
 
 @NP
 
+@Summary
+    @KeyWords {}
+@Begin
+@PP
+@End @Summary
+
+@NP
+
+@Abstract
+    @KeyWords {}
+@Begin
+@PP
+@End @Abstract
+
+@NP
+
+@IndexOfContents
+
+@NP
+
+@IndexOfGraphics
+
+@NP
+
+@IndexOfTables
+
+@NP
+
 @BeginSections
 @Section
-    @Title { Planteamiento del problema }
+    @Title { Problema "/" Objeto y Justificación }
+    @Tag { problema }
 @Begin
-
+@AddToIndex @Title { Problema "/" Objeto y Justificación } @Tag { problema }
+@PP
 @End @Section
 
 @Section
-    @Title { Justificación }
+    @Title { Objetivos de la Investigación }
+    @Tag { objetivos }
 @Begin
+@AddToIndex @Title { Objetivos de la Investigación } @Tag { objetivos }
 
+@BeginSubSections
+@SubSection
+    @Title { Objetivos Generales }
+    @Tag { obj.gen }
+@Begin
+@AddToIndex @Title { Objetivos Generales } @Tag { obj.gen }
+@PP
+@End @SubSection
+
+@SubSection
+    @Title { Objetivos Específicos }
+    @Tag { obj.esp }
+@Begin
+@AddToIndex @Title { Objetivos Específicos } @Tag { obj.esp }
+@PP
+@End @SubSection
+
+@EndSubSections
 @End @Section
 
 @Section
-    @Title { Marco teórico }
+    @Title { Limitaciones de la Investigación }
+    @Tag { limitaciones }
 @Begin
-
+@AddToIndex @Title { Limitaciones de la Investigación } @Tag { limitaciones }
+@PP
 @End @Section
 
 @Section
-    @Title { Objetivos }
+    @Title { Hipótesis }
+    @Tag { hipotesis }
 @Begin
-
+@AddToIndex @Title { Hipótesis } @Tag { hipotesis }
+@PP
 @End @Section
 
 @Section
     @Title { Metodología }
+    @Tag { metodologia }
 @Begin
-
+@AddToIndex @Title { Metodología } @Tag { metodologia }
+@PP
 @End @Section
 
 @Section
-    @Title { Marco administrativo }
+    @Title { Viabilidad de la Investigación }
+    @Tag { viabilidad }
 @Begin
-
+@AddToIndex @Title { Viabilidad de la Investigación } @Tag { viabilidad }
+@PP
 @End @Section
 
 @Section
-    @Title { Viabilidad }
+    @Title { Resultados Esperados de la Investigación y Estrategias de Difusión }
+    @Tag { resultados }
 @Begin
-
+@AddToIndex @Title { Resultados Esperados de la Investigación y Estrategias de Difusión } @Tag { resultados }
+@PP
 @End @Section
 
 @Section
-    @Title { Resultados }
+    @Title { Cronograma de Actividades }
+    @Tag { cronograma }
 @Begin
-
+@AddToIndex @Title { Cronograma de Actividades } @Tag { cronograma }
+@PP
 @End @Section
 
-
 @Section
-    @Title { Cronograma de actividades }
+    @Title { Referencias Bibliográficas }
+    @Tag { referencias }
 @Begin
+@AddToIndex @Title { Referencias Bibliográficas } @Tag { referencias }
+@PP
 @End @Section
 @EndSections
 
