@@ -1,5 +1,3 @@
-include/mydef.utf8
-
 sample/include
 sample/img/
 sample/Makefile

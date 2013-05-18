@@ -128,6 +128,8 @@ def @TEG
     named compulsory @MyLastName { }
     named compulsory @MyPhoneNumber { }
     named compulsory @PaperTitle { }
+    named @Report { N }
+    named @Sex { M }
     body @Body
 {
     def @Abstract
@@ -170,6 +172,20 @@ def @TEG
         named compulsory @Year { }
         named @Cotutor { dfl }
     {
+        macro @Grade {
+            @Sex @Case {
+                { M m } @Yield { Licenciado }
+                else @Yield { Licenciada }
+            }
+        }
+
+        macro @DocType {
+            @Report @Case {
+                { Y y } @Yield { Informe }
+                else @Yield { Proyecto }
+            }
+        }
+
         |1.4c {
             { 0.55 @Scale @IncludeGraphic "./include/img/logo-luz.eps" }
 
@@ -187,8 +203,8 @@ def @TEG
         //10.8f @MyCenter @Options { 1.2fx } @B { @PaperTitle }
 
         //2.4f @MyCenter @Options { 1.2fx } @B {
-            Proyecto de Trabajo Especial de Grado presentado como @FF
-            requisito para optar al título de Licenciado en Computación
+            @DocType de Trabajo Especial de Grado presentado como @FF
+            requisito para optar al título de @Grade en Computación
         }
 
         //2.4f rlines @Break {
