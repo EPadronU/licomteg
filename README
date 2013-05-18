@@ -112,8 +112,12 @@ Genera el resumen del TEG. Recibe como parámetro las palabras claves.
     @MyLastName { }
     @MyPhoneNumber { }
     @PaperTitle { }
+    [@Report { [Y|y|N|n] }]
+    [@Sex { [M|m|F|f]}]
   { }
 
 Éste símbolo debe contener el cuerpo del Trabajo Especial de Grado. Recibe como
 parámetros la dirección, correo electrónico, nombres, cédula, apellidos y
-número de teléfono del autor; adicionalmente recibe el título del TEG.
+número de teléfono del autor; adicionalmente recibe el título del TEG. Se puede
+indicar de manera opcional si el documento es el informe (se asume que es el
+proyecto de manera predeterminada) y el sexo del autor (masculino por defecto).
