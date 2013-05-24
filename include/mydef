@@ -61,7 +61,7 @@ def @AddToIndex into { @EntryPlace&&foll_or_prec }
     named compulsory @Tag { }
     named compulsory @Title { }
 {
-   @Title @Dots @PageOf @Tag
+   @Title @Dots @HExpand {} @PageOf @Tag
 }
 
 # Galera que se encarga de añadir un capítulo en el índice general
@@ -91,7 +91,7 @@ def @AddToGIndex into { @GraphPlace&&foll_or_prec }
     named compulsory @Tag { }
     named compulsory @Title { }
 {
-    @Title @Dots @PageOf @Tag
+    @Title @Dots @HExpand {} @PageOf @Tag
 }
 
 # Símbolo receptivo para una entrada en el índice de tablas
@@ -113,7 +113,7 @@ def @AddToTIndex into { @TablePlace&&foll_or_prec }
     named compulsory @Tag { }
     named compulsory @Title { }
 {
-    @Title @Dots @PageOf @Tag
+    @Title @Dots @HExpand {} @PageOf @Tag
 }
 
 # Símbolos visibles fuera de @TEG
