@@ -31,7 +31,7 @@
 ###############################################################################
 
 @Use { @BasicSetup
-  # @InitialFont	{ Times Base 12p	} # initial font
+    @InitialFont	{ Arial Base 12p	} # initial font
     @InitialBreak	{ adjust 1.8fx nohyphen unbreakablefirst unbreakablelast } # 1.5s (1s = 1.2f)
   # @InitialOutdent	{ 2f @OrIfPlain 4s	} # initial outdent
   # @InitialSpace	{ lout			} # initial space style
@@ -50,7 +50,7 @@
   # @WideIndent		{ 4.00f	@OrIfPlain 10s	} # @WideTaggedList indent
   # @VeryWideIndent	{ 8.00f	@OrIfPlain 20s	} # @VeryWideTaggedList indent
     @ListOuterGap	{ 0v                    } # gap before, after lists
-    @ListGap		{ 2.4fx                 } # gap between list items
+    @ListGap		{ 1.2f                  } # gap between list items
   # @ListIndent		{ 0s			} # indent of list items
   # @ListRightIndent	{ 0s			} # right indent of list items
   # @ListLabelWidth	{ 2.00f	@OrIfPlain 5s	} # width allowed for list tags
@@ -355,13 +355,13 @@
   # @FirstSubAppendixNumber	{ 1		} # first sub-app. num (Arabic)
   # @SubSubAppendixNumbers	{ Arabic	} # kind of sub-subapp. numbers
   # @FirstSubSubAppendixNumber	{ 1		} # first sub-sub. num (Arabic)
-    @SectionHeadingFont		{ Roman     	} # section head font
+    @SectionHeadingFont		{ Base     	} # section head font
   # @SectionHeadingBreak	{ ragged 1.2fx nohyphen	} # section head break
   # @SectionHeadingFormat	{ number @DotSep title	} # section head fmt
-    @SubSectionHeadingFont	{ Roman         	} # subsect head font
+    @SubSectionHeadingFont	{ Base         	} # subsect head font
   # @SubSectionHeadingBreak	{ ragged 1.2fx nohyphen	} # subsect head break
   # @SubSectionHeadingFormat	{ number @DotSep title	} # subsect head fmt
-    @SubSubSectionHeadingFont	{ Roman                 } # sub-ss. head font
+    @SubSubSectionHeadingFont	{ Base                 } # sub-ss. head font
   # @SubSubSectionHeadingBreak	{ ragged 1.2fx nohyphen	} # sub-ss. head break
   # @SubSubSectionHeadingFormat	{ number @DotSep title	} # sub-ss. head fmt
   # @AppendixHeadingFont	{ Bold			} # appendix head font
