@@ -186,36 +186,41 @@ def @TEG
             }
         }
 
-        |1.4c {
-            { 0.55 @Scale @IncludeGraphic "./include/img/logo-luz.eps" }
 
-            ||0.2c @MyCenter {
-                REPÚBLICA BOLIVARIANA DE VENEZUELA @FF
-                UNIVERSIDAD DEL ZULIA @FF
-                FACULTAD EXPERIMENTAL DE CIENCIAS @FF
-                DIVISIÓN DE PROGRAMAS ESPECIALES @FF
-                LICENCIATURA EN COMPUTACIÓN
+        23.93c @High {
+            |1.4c {
+                       { 0.55 @Scale @IncludeGraphic "./include/img/logo-luz.eps" }
+
+                       ||0.2c @MyCenter {
+                           REPÚBLICA BOLIVARIANA DE VENEZUELA @FF
+                               UNIVERSIDAD DEL ZULIA @FF
+                               FACULTAD EXPERIMENTAL DE CIENCIAS @FF
+                               DIVISIÓN DE PROGRAMAS ESPECIALES @FF
+                               LICENCIATURA EN COMPUTACIÓN
+                       }
+
+                       ||0.2c { @IncludeGraphic "./include/img/logo-fec.eps" }
+                   }
+
+            //10.8f @MyCenter @Options { 1.2fx } @B { @PaperTitle }
+
+            //2.4f @MyCenter @Options { 1.2fx } @B {
+            @DocType de Trabajo Especial de Grado presentado como @FF
+                requisito para optar al título de @Grade en Computación
             }
 
-            ||0.2c { @IncludeGraphic "./include/img/logo-fec.eps" }
+            //2.4f rlines @Break {
+                Autor: @MyFirstName @MyLastName
+
+               //2.4f Tutor: @Tutor
+
+               //2.4f @Cotutor @Case { dfl @Yield { } else @Yield { Cotutor: @Cotutor } }
+            }
+
+            // @VExpand {}
+
+            // @MyCenter { Maracaibo, @Month de @Year }
         }
-
-        //10.8f @MyCenter @Options { 1.2fx } @B { @PaperTitle }
-
-        //2.4f @MyCenter @Options { 1.2fx } @B {
-            @DocType de Trabajo Especial de Grado presentado como @FF
-            requisito para optar al título de @Grade en Computación
-        }
-
-        //2.4f rlines @Break {
-            Autor: @MyFirstName @MyLastName
-
-            //2.4f Tutor: @Tutor
-
-            //2.4f @Cotutor @Case { dfl @Yield { //0.8f } else @Yield { Cotutor: @Cotutor } }
-        }
-
-        //22.6f @MyCenter { Maracaibo, @Month de @Year }
     }
 
     # Para dedicatoria, reconocimiento, agradecimientos, entre otros
