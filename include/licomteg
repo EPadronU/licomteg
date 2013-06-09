@@ -32,7 +32,7 @@
 
 @Use { @BasicSetup
     @InitialFont	{ Arial Base 12p	} # initial font
-    @InitialBreak	{ adjust 1.8fx nohyphen unbreakablefirst unbreakablelast } # 1.5s (1s = 1.2f)
+    @InitialBreak	{ adjust 1.8fx nohyphen } # 1.5s (1s = 1.2f)
   # @InitialOutdent	{ 2f @OrIfPlain 4s	} # initial outdent
   # @InitialSpace	{ lout			} # initial space style
     @InitialLanguage	{ Spanish               } # initial language
