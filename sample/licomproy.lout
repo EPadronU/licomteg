@@ -1,4 +1,3 @@
-# vim: set wrap linebreak nolist
 @Include { "include/licomteg" }
 
 @Doc @Text @Begin
@@ -32,7 +31,7 @@
 @Summary
     @KeyWords {}
 @Begin
-@PP
+
 @End @Summary
 
 @NP
@@ -40,7 +39,7 @@
 @Abstract
     @KeyWords {}
 @Begin
-@PP
+
 @End @Abstract
 
 @NP
@@ -59,103 +58,145 @@
 
 @BeginSections
 @Section
-    @Title { Problema "/" Objeto y Justificación }
-    @Tag { problema }
+    @Title { Planteamiento del problema }
+    @Tag { planteamiento }
 @Begin
-@AddToIndex @Title { Problema "/" Objeto y Justificación } @Tag { problema }
-@PP
+    @AddToIndex @Title { Planteamiento del problema } @Tag { planteamiento } ||
+
+@BeginSubSections
+@SubSection
+    @Title { Formulación del problema }
+    @Tag { formulacion }
+@Begin
+    @AddToIndex @Title { Formulación del problema } @Tag { formulacion } ||
+
+@End @SubSection
+@EndSubSections
 @End @Section
 
 @Section
-    @Title { Objetivos de la Investigación }
+    @Title { Objetivos }
     @Tag { objetivos }
 @Begin
-@AddToIndex @Title { Objetivos de la Investigación } @Tag { objetivos }
+    @AddToIndex @Title { Objetivos } @Tag { objetivos } ||
 
 @BeginSubSections
 @SubSection
     @Title { Objetivos Generales }
     @Tag { obj.gen }
 @Begin
-@AddToIndex @Title { Objetivos Generales } @Tag { obj.gen }
-@PP
+    @AddToIndex @Title { Objetivos Generales } @Tag { obj.gen } ||
+
 @End @SubSection
 
 @SubSection
     @Title { Objetivos Específicos }
     @Tag { obj.esp }
 @Begin
-@AddToIndex @Title { Objetivos Específicos } @Tag { obj.esp }
-@PP
+    @AddToIndex @Title { Objetivos Específicos } @Tag { obj.esp } ||
+
+@End @SubSection
+@EndSubSections
+@End @Section
+
+@Section
+    @Title { Justificación de la Investigación }
+    @Tag { justificacion }
+@Begin
+    @AddToIndex @Title { Justificación de la Investigación } @Tag { justificacion } ||
+
+@End @Section
+
+@Section
+    @Title { Delimitaciones de la Investigación }
+    @Tag { delimitaciones }
+@Begin
+    @AddToIndex @Title { Delimitaciones de la Investigación } @Tag { delimitaciones } ||
+
+@End @Section
+
+@Section
+    @Title { Metodología de la Investigación }
+    @Tag { metodologia }
+@Begin
+    @AddToIndex @Title { Metodología de la Investigación } @Tag { metodologia } ||
+
+@End @Section
+
+@Section
+    @Title { Estudio de Factibilidad }
+    @Tag { factibilidad }
+@Begin
+    @AddToIndex @Title { Estudio de Factibilidad } @Tag { factibilidad } ||
+
+@BeginSubSections
+@SubSection
+    @Title { Recuersos Humanos }
+    @Tag { rec.hum }
+@Begin
+    @AddToIndex @Title { Recuersos Humanos } @Tag { rec.hum } ||
+
+@End @SubSection
+
+@SubSection
+    @Title { Recuersos Materiales }
+    @Tag { rec.mat }
+@Begin
+    @AddToIndex @Title { Recuersos Materiales } @Tag { rec.mat } ||
+
+@End @SubSection
+
+@SubSection
+    @Title { Recuersos Financieros }
+    @Tag { rec.fin }
+@Begin
+    @AddToIndex @Title { Recuersos Financieros } @Tag { rec.fin } ||
+
+@End @SubSection
+
+@SubSection
+    @Title { Recuersos Legales }
+    @Tag { rec.leg }
+@Begin
+    @AddToIndex @Title { Recuersos Legales } @Tag { rec.leg } ||
+
 @End @SubSection
 
 @EndSubSections
 @End @Section
 
 @Section
-    @Title { Limitaciones de la Investigación }
-    @Tag { limitaciones }
-@Begin
-@AddToIndex @Title { Limitaciones de la Investigación } @Tag { limitaciones }
-@PP
-@End @Section
-
-@Section
-    @Title { Hipótesis }
-    @Tag { hipotesis }
-@Begin
-@AddToIndex @Title { Hipótesis } @Tag { hipotesis }
-@PP
-@End @Section
-
-@Section
-    @Title { Metodología }
-    @Tag { metodologia }
-@Begin
-@AddToIndex @Title { Metodología } @Tag { metodologia }
-@PP
-@End @Section
-
-@Section
     @Title { Viabilidad de la Investigación }
     @Tag { viabilidad }
 @Begin
-@AddToIndex @Title { Viabilidad de la Investigación } @Tag { viabilidad }
-@PP
+    @AddToIndex @Title { Viabilidad de la Investigación } @Tag { viabilidad } ||
+
 @End @Section
 
 @Section
-    @Title { Estudio de la Factibilidad.  Recursos Necesarios para la Investigación }
+    @Title { Resultados Esperados }
     @Tag { resultados }
 @Begin
-@AddToIndex @Title { Estudio de la Factibilidad.  Recursos Necesarios para la Investigación } @Tag { resultados }
-@PP
-@End @Section
+    @AddToIndex @Title { Resultados Esperados } @Tag { resultados } ||
 
-@Section
-    @Title { Resultados Esperados de la Investigación y Estrategias de Difusión }
-    @Tag { resultados }
-@Begin
-@AddToIndex @Title { Resultados Esperados de la Investigación y Estrategias de Difusión } @Tag { resultados }
-@PP
 @End @Section
 
 @Section
     @Title { Cronograma de Actividades }
     @Tag { cronograma }
 @Begin
-@AddToIndex @Title { Cronograma de Actividades } @Tag { cronograma }
-@PP
-@End @Section
+    @AddToIndex @Title { Cronograma de Actividades } @Tag { cronograma } ||
 
-@Section
-    @Title { Referencias Bibliográficas }
-    @Tag { referencias }
-@Begin
-@AddToIndex @Title { Referencias Bibliográficas } @Tag { referencias }
-@PP
 @End @Section
 @EndSections
+
+@NP
+
+@ExtraSection
+    @Title { Referencias Bibliográficas }
+@Begin
+
+@End @ExtraSection
 
 @End @TEG
 @End @Text
