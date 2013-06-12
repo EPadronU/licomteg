@@ -1,0 +1,321 @@
+# vim: filetype=lout
+
+###############################################################################
+# Macros                                                                      #
+###############################################################################
+
+# Salto de línea
+macro @FF { //1.2fx }
+
+# Une varias líneas del archivo fuente
+macro @JN { &1s }
+
+# Páginas cuya numeración será omitida
+macro @OmittedPages { 1 2 3 4 5 }
+
+
+###############################################################################
+# Definiciones                                                                #
+###############################################################################
+
+# Centra texto
+def @MyCenter
+    named @Options { }
+    right @Body
+{
+    { @Options clines } @Break { @Body }
+}
+
+# Para omitir la numeración en las páginas deseadas
+def @IfNotInOmittedPages
+    left @PageNum
+{
+    @PageNum @Case {
+        { @OmittedPages } @Yield @Null
+        else @Yield @PageNum
+    }
+}
+
+# Secuencia de puntos para los índices
+def @Dots
+{
+    { @Dots }.
+}
+
+# Símbolo receptivo para una entrada en el índice general
+def @EntryPlace
+{
+    @Galley
+}
+
+# Lista de entradas del índice general
+def @EntryList
+{
+    @EntryPlace
+    //1.2f @EntryList
+}
+
+# Galera que se encarga de añadir un símbolo en el índice general
+def @AddToIndex into { @EntryPlace&&foll_or_prec }
+    named compulsory @Tag { }
+    named compulsory @Title { }
+{
+   @Title @Dots @HExpand {} @PageOf @Tag
+}
+
+# Galera que se encarga de añadir un capítulo en el índice general
+def @AddChapterToIndex into { @EntryPlace&&foll_or_prec }
+    named compulsory @Num { }
+    named compulsory @Title { }
+{
+   Capítulo { @Num }. @Title
+}
+
+# Símbolo receptivo para una entrada en el índice de gráficos
+def @GraphPlace
+{
+    @Galley
+}
+
+# Lista de entradas del índice de gráficos
+def @GraphList
+{
+    @GraphPlace
+    //1.2f @GraphList
+}
+
+# Galera que se encarga de añadir un gráfico en su índice
+def @AddToGIndex into { @GraphPlace&&foll_or_prec }
+    named compulsory @Tag { }
+    named compulsory @Title { }
+{
+    @Title @Dots @HExpand {} @PageOf @Tag
+}
+
+# Símbolo receptivo para una entrada en el índice de tablas
+def @TablePlace
+{
+    @Galley
+}
+
+# Lista de entradas del índice de tablas.
+def @TableList
+{
+    @TablePlace
+    //1.2f @TableList
+}
+
+# Galera que se encarga de añadir un gráfico en su índice
+def @AddToTIndex into { @TablePlace&&foll_or_prec }
+    named compulsory @Tag { }
+    named compulsory @Title { }
+{
+    @Title @Dots @HExpand {} @PageOf @Tag
+}
+
+# Símbolos visibles fuera de @TEG
+export @Abstract @Chapter @Cover @ExtraSection @Facade @IndexOfContents @IndexOfGraphics @IndexOfTables @Introduction @Summary
+
+# El núcleo de este archivo de configuración
+def @TEG
+    named compulsory @MyAddress { }
+    named compulsory @MyEmail { }
+    named compulsory @MyFirstName { }
+    named compulsory @MyIDNumber { }
+    named compulsory @MyLastName { }
+    named compulsory @MyPhoneNumber { }
+    named compulsory @PaperTitle { }
+    named @Report { N }
+    named @Sex { M }
+    body @Body
+{
+    def @Abstract
+        named compulsory @KeyWords { }
+        named @Tag { }
+        right @Body
+    {
+        @PageMark @Tag // @AddToIndex @Title { Abstract } @Tag { @Tag } //
+
+        1.2fx @Break {
+            { @MyLastName }, { @MyFirstName }. @B { ``@PaperTitle '' }. Trabajo Especial de Grado. @JN
+            Universidad del Zulia. Facultad Experimental de Ciencias. División de Programas @JN
+            Especiales. Maracaibo, Venezuela. @Date @Format { @Year }. @PageOf { last.page }p.
+        }
+
+        //2.4f @MyCenter @B ABSTRACT
+
+        //1.0f 1.2fx @Break { @Body }
+
+        //2.4f 1.2fx @Break { @B { KeyWords }: @KeyWords }
+
+        //2.4f @B { Email }: @MyEmail
+    }
+
+    def @Chapter
+        named compulsory @Num { }
+        named compulsory @Title { }
+        right @Body
+    {
+        @AddChapterToIndex @Title { @Title } @Num { @Num } ||
+
+        @MyCenter @B { CAPÍTULO @Num //2.4f @Title }
+        // { @Body }
+    }
+
+    def @Cover
+        named compulsory @Month { }
+        named compulsory @Tutor { }
+        named compulsory @Year { }
+        named @Cotutor { dfl }
+    {
+        macro @Grade {
+            @Sex @Case {
+                { M m } @Yield { Licenciado }
+                else @Yield { Licenciada }
+            }
+        }
+
+        macro @DocType {
+            @Report @Case {
+                { Y y } @Yield { Informe }
+                else @Yield { Proyecto }
+            }
+        }
+
+        23.94c @High {
+            @CD {
+                    { 0.55 @Scale @IncludeGraphic "./include/img/logo-luz.eps" }
+
+                    ||0.2c @MyCenter {
+                        REPÚBLICA BOLIVARIANA DE VENEZUELA @FF
+                        UNIVERSIDAD DEL ZULIA @FF
+                        FACULTAD EXPERIMENTAL DE CIENCIAS @FF
+                        DIVISIÓN DE PROGRAMAS ESPECIALES @FF
+                        LICENCIATURA EN COMPUTACIÓN
+                    }
+
+                    ||0.2c { @IncludeGraphic "./include/img/logo-fec.eps" }
+                }
+
+            //9.6f @CD 15c @Wide { @MyCenter @Options { 1.2fx } @B { @PaperTitle } }
+
+            //1.2f @MyCenter @Options { 1.2fx } @B {
+                @DocType de Trabajo Especial de Grado presentado como @FF
+                requisito para optar al título de @Grade en Computación
+            }
+
+            //2.4f rlines @Break {
+                Autor: @MyFirstName @MyLastName
+
+               //2.4f Tutor: @Tutor
+
+               //2.4f @Cotutor @Case { dfl @Yield { } else @Yield { Cotutor: @Cotutor } }
+            }
+
+            // @VExpand {}
+
+            // @MyCenter { Maracaibo, @Month de @Year }
+        }
+    }
+
+    # Para dedicatoria, reconocimiento, agradecimientos, entre otros
+    def @ExtraSection
+        named compulsory @Title { }
+        named @AlterTitle { dfl }
+        named @Tag { }
+        right @Body
+    {
+        @PageMark @Tag // @AddToIndex @Title { @AlterTitle @Case { dfl @Yield @Title else @Yield @AlterTitle } } @Tag { @Tag } //
+
+        @MyCenter @B @Title
+        //1.0f ragged @Break { @Body }
+    }
+
+    def @Facade
+        named compulsory @TutorInfo { }
+        named @CotutorInfo { dfl }
+    {
+        def @Sign
+            left @Linesize
+            right @Body
+        {
+            @Linesize @Wide @Underline @HExpand {}
+            &/0.6f @I @Body
+        }
+
+        //6f @CD 15c @Wide { @MyCenter @Options { 1.2fx } @B { @PaperTitle } }
+
+        //10.8f @MyCenter {
+            10c @Sign {
+                @MyFirstName @MyLastName @FF
+                CI. No.: @MyIDNumber @FF
+                Teléfono: @MyPhoneNumber @FF
+                @MyAddress @FF
+                Correo electrónico: @MyEmail
+            }
+
+            //8.4f 10c @Sign @TutorInfo
+
+            //8.4f @CotutorInfo @Case { dfl @Yield { {} } else @Yield { 10c @Sign @CotutorInfo } }
+        }
+    }
+
+    def @IndexOfContents {
+        @MyCenter @B { ÍNDICE DE CONTENIDO }
+
+        //2.4f { @HExpand {} Pág. }
+        //1.2f { @EntryList }
+    }
+
+    # Índice de gráficos.
+    def @IndexOfGraphics
+    {
+        @MyCenter @B { ÍNDICE DE GRÁFICOS }
+
+        //2.4f { @HExpand {} Pág. }
+        //1.2f { @GraphList }
+    }
+
+    # Índice de tablas.
+    def @IndexOfTables
+    {
+        @MyCenter @B { ÍNDICE DE TABLAS }
+
+        //2.4f { @HExpand {} Pág. }
+        //1.2f { @TableList }
+    }
+
+    def @Introduction
+        named @Tag { }
+        right @Body
+    {
+        @PageMark @Tag // @AddToIndex @Title { Introducción } @Tag { @Tag } //
+
+        @MyCenter @B INTRODUCCIÓN
+        //1f @Body
+    }
+
+    def @Summary
+        named compulsory @KeyWords { }
+        named @Tag { }
+        right @Body
+    {
+        @PageMark @Tag // @AddToIndex @Title { Resumen } @Tag { @Tag } //
+
+        1.2fx @Break {
+            { @MyLastName }, { @MyFirstName }. @B { ``@PaperTitle '' }. Trabajo Especial de Grado. @JN
+            Universidad del Zulia. Facultad Experimental de Ciencias. División de Programas @JN
+            Especiales. Maracaibo, Venezuela. @Date @Format { @Year }. @PageOf { last.page }p.
+        }
+
+        //2.4f @MyCenter @B RESUMEN
+
+        //1.0f 1.2fx @Break { @Body }
+
+        //2.4f 1.2fx @Break { @B { Palabras claves }: @KeyWords }
+
+        //2.4f @B { Correo electrónico }: @MyEmail
+    }
+
+    @Body
+}
