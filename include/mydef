@@ -145,7 +145,7 @@ def @TEG
 
         macro @DocType { @Report @Case { { Y y } @Yield { Informe } else @Yield { Proyecto } } }
 
-        24.90c @High {
+        24.60c @High {
             @CD {
                     { 0.85 @Scale @IncludeGraphic "./include/img/logo-luz.eps" }
 
@@ -232,7 +232,10 @@ def @TEG
 
     # Índice de gráficos.
     def @IndexOfGraphics
+        named @Tag { }
     {
+        @PageMark @Tag // @AddToIndex @Title { Índice de Figuras } @Tag { @Tag } //
+
         @MyCenter @B { ÍNDICE DE GRÁFICOS }
 
         //2.4f { @HExpand {} Pág. }
@@ -241,7 +244,10 @@ def @TEG
 
     # Índice de tablas.
     def @IndexOfTables
+        named @Tag { }
     {
+        @PageMark @Tag // @AddToIndex @Title { Índice de Tablas } @Tag { @Tag } //
+
         @MyCenter @B { ÍNDICE DE TABLAS }
 
         //2.4f { @HExpand {} Pág. }

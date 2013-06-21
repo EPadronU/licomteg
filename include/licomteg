@@ -82,9 +82,9 @@
     #@PageBackground { } # background of each page
     @TopMargin { 1.5c } # top margin of all pages
     @FootMargin { 1.5c } # bottom margin of all pages
-    @OddLeftMargin { 2c } # left margin of odd pages
+    @OddLeftMargin { 2.5c } # left margin of odd pages
     @OddRightMargin { 1.5c } # right margin of odd pages
-    @EvenLeftMargin { 2c } # left margin of even pages
+    @EvenLeftMargin { 2.5c } # left margin of even pages
     @EvenRightMargin { 1.5c } # right margin of even pages
     #@OddLeftBodyMargin { 0c } # extra margin for page body
     #@OddRightBodyMargin { 0c } # extra margin for page body
