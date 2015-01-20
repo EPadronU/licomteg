@@ -29,9 +29,10 @@
 
 @Use { @BasicSetup
     @InitialFont { Arial Base 12p } # initial font
-    @InitialBreak { adjust 1.8fx nohyphen } # 1.5s (1s = 1.2f)
+    @InitialBreak { breakablefirst breakablelast adjust 1.8fx nohyphen } # 1.5s (1s = 1.2f)
+    #@InitialBreak { unbreakablefirst unbreakablelast adjust 1.8fx nohyphen } # 1.5s (1s = 1.2f)
     #@InitialOutdent { 2f @OrIfPlain 4s } # initial outdent
-    #@InitialSpace { lout } # initial space style
+    @InitialSpace { tex } # initial space style
     @InitialLanguage { Spanish } # initial language
     #@InitialColour { black } # initial colour
     #@InitialBackgroundColour { white } # initial background colour
@@ -47,14 +48,14 @@
     #@WideIndent { 4.00f @OrIfPlain 10s } # @WideTaggedList indent
     #@VeryWideIndent { 8.00f @OrIfPlain 20s } # @VeryWideTaggedList indent
     @ListOuterGap { 0v } # gap before, after lists
-    @ListGap { 1.2f } # gap between list items
-    @ListIndent { 4s } # indent of list items
+    @ListGap { 2.0fx } # gap between list items
+    @ListIndent { 0c } # indent of list items
     #@ListRightIndent { 0s } # right indent of list items
-    #@ListLabelWidth { 2.00f @OrIfPlain 5s } # width allowed for list tags
+    @ListLabelWidth { 4s } # width allowed for list tags
     #@ListLabelRight { No } # right-adjust list labels
     #@ListLabelRightGap { 2s } # gap when right-adjusting
     #@ListFont { } # font of list items
-    @ListBreak { 1.2fx } # break style of list items
+    @ListBreak {  breakablefirst breakablelast adjust 1.8fx nohyphen } # break style of list items
     #@NumberSeparator { . } # separates nums like 2.3.7
     #@CrossLinkFormat { @Body } # format of cross links
     #@ExternalLinkFormat { @Body } # format of external links
@@ -65,7 +66,8 @@
 # @Include command for reading personal definitions from current directory.   #
 ###############################################################################
 
-@Include { "./include/mydef" }
+@Include { "include/lib/mydef.lout" }
+@Include { "paging.lout" }
 
 
 ###############################################################################
@@ -83,9 +85,9 @@
     @TopMargin { 1.5c } # top margin of all pages
     @FootMargin { 1.5c } # bottom margin of all pages
     @OddLeftMargin { 2.5c } # left margin of odd pages
-    @OddRightMargin { 1.5c } # right margin of odd pages
+    @OddRightMargin { 1.7c } # right margin of odd pages
     @EvenLeftMargin { 2.5c } # left margin of even pages
-    @EvenRightMargin { 1.5c } # right margin of even pages
+    @EvenRightMargin { 1.7c } # right margin of even pages
     #@OddLeftBodyMargin { 0c } # extra margin for page body
     #@OddRightBodyMargin { 0c } # extra margin for page body
     #@EvenLeftBodyMargin { 0c } # extra margin for page body

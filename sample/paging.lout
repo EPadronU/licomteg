@@ -1,0 +1,9 @@
+# Páginas cuya numeración será omitida
+macro @OmittedPages { 1 }
+
+# Para omitir la numeración en las páginas deseadas
+def @IfNotInOmittedPages
+    left @PageNum
+{
+    @PageNum @Case { { @OmittedPages } @Yield " " else @Yield @PageNum }
+}

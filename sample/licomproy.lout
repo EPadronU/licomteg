@@ -1,4 +1,4 @@
-@Include { "include/licomteg" }
+@Include { "include/lib/licomteg.lout" }
 
 @Doc @Text @Begin
 @TEG
